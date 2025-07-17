@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Novo Projeto Criado</title>
+    <title>Projeto Criado - Em Ideação</title>
   </head>
   <body
     style="
@@ -26,8 +26,8 @@
     >
       <div
         style="
-          background-color: #667eea;
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          background-color: #e74c3c;
+          background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
           color: white;
           padding: 20px;
           text-align: center;
@@ -35,19 +35,20 @@
           margin: -20px -20px 20px -20px;
         "
       >
-        <h1 style="margin: 0; padding: 0">🎉 Novo Projeto Criado!</h1>
+        <h1 style="margin: 0; padding: 0">🎉 Projeto Criado - Em Ideação</h1>
       </div>
       <div style="text-align: center; font-size: 42px; margin: 20px 0">
-        🚀✨🎊
+        🎯💭✨
       </div>
       <h2 style="color: #2c3e50">Olá, {{NOME_USUARIO}}!</h2>
       <p style="color: #34495e">
-        Parabéns! Seu novo projeto foi criado com sucesso em nosso sistema.
+        Seu projeto foi criado com sucesso e entrou na fase de ideação. Nossa
+        equipe está analisando os requisitos iniciais.
       </p>
       <div style="margin: 20px 0; text-align: left">
         <span
           style="
-            background-color: #6c5ce7;
+            background-color: #e74c3c;
             color: white;
             padding: 8px 16px;
             border-radius: 20px;
@@ -55,7 +56,7 @@
             font-weight: bold;
             display: inline-block;
           "
-          >PROJETO CRIADO</span
+          >IDEAÇÃO</span
         >
       </div>
       <div
@@ -100,6 +101,20 @@
             </tr>
             <tr>
               <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
+                <strong style="color: #34495e">Status Atual:</strong>
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{STATUS_ATUAL}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
                 <strong style="color: #34495e">Data de Criação:</strong>
               </td>
               <td
@@ -114,7 +129,7 @@
             </tr>
             <tr>
               <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                <strong style="color: #34495e">Solicitante:</strong>
+                <strong style="color: #34495e">Responsável:</strong>
               </td>
               <td
                 style="
@@ -123,71 +138,17 @@
                   color: #2c3e50;
                 "
               >
-                {{SOLICITANTE}}
-              </td>
-            </tr>
-            <tr>
-              <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                <strong style="color: #34495e">ID do Projeto:</strong>
-              </td>
-              <td
-                style="
-                  padding: 8px 0;
-                  border-bottom: 1px solid #f1f3f4;
-                  color: #2c3e50;
-                "
-              >
-                {{ID_PROJETO}}
-              </td>
-            </tr>
-            <tr>
-              <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                <strong style="color: #34495e">Categoria:</strong>
-              </td>
-              <td
-                style="
-                  padding: 8px 0;
-                  border-bottom: 1px solid #f1f3f4;
-                  color: #2c3e50;
-                "
-              >
-                {{CATEGORIA_PROJETO}}
+                {{RESPONSAVEL}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0">
                 <strong style="color: #34495e">Prioridade:</strong>
               </td>
-              <td style="padding: 8px 0; color: #2c3e50">
-                {{PRIORIDADE_INICIAL}}
-              </td>
+              <td style="padding: 8px 0; color: #2c3e50">{{PRIORIDADE}}</td>
             </tr>
           </table>
         </div>
-      </div>
-      <div
-        style="
-          background-color: #f8f9fa;
-          border: 1px solid #a29bfe;
-          color: #2d3436;
-          padding: 15px;
-          border-radius: 5px;
-          margin: 20px 0;
-        "
-      >
-        <h3 style="margin-top: 0">
-          🎯 Bem-vindo ao Sistema de Gestão de Projetos!
-        </h3>
-        <p>
-          Seu projeto foi registrado e está aguardando análise inicial. Nossa
-          equipe irá:
-        </p>
-        <ul style="padding-left: 20px; margin: 0">
-          <li>Analisar os requisitos fornecidos</li>
-          <li>Avaliar a viabilidade técnica</li>
-          <li>Definir a prioridade no backlog</li>
-          <li>Atribuir um responsável técnico</li>
-        </ul>
       </div>
       <div
         style="
@@ -199,20 +160,17 @@
           margin: 20px 0;
         "
       >
-        <h3 style="margin-top: 0">⏱️ Cronograma Previsto</h3>
-        <p style="margin: 5px 0">
-          <strong>Próxima Etapa:</strong> Análise Inicial
+        <h3 style="margin-top: 0">🎯 Fase de Ideação</h3>
+        <p>
+          Seu projeto foi criado e está na fase de ideação. Estamos trabalhando
+          na definição do escopo e requisitos. Atividades em andamento:
         </p>
-        <p style="margin: 5px 0">
-          <strong>Tempo Estimado:</strong> 2-3 dias úteis
-        </p>
-        <p style="margin: 5px 0">
-          <strong>Responsável:</strong> {{ANALISTA_INICIAL}}
-        </p>
-        <p style="margin-top: 10px">
-          Você será notificado automaticamente quando o projeto avançar para a
-          próxima fase.
-        </p>
+        <ul style="padding-left: 20px; margin: 0">
+          <li>Análise de requisitos funcionais</li>
+          <li>Definição de objetivos e metas</li>
+          <li>Identificação de stakeholders</li>
+          <li>Avaliação de riscos iniciais</li>
+        </ul>
       </div>
       <div
         style="
@@ -225,20 +183,34 @@
         "
       >
         <h3 style="margin-top: 0">📝 Próximos Passos</h3>
-        <p>Enquanto aguarda a análise, você pode:</p>
-        <ul style="padding-left: 20px; margin: 0">
-          <li>
-            Acessar o portal do projeto:
-            <strong
-              ><a href="{{LINK_PORTAL}}" style="color: #2e7d32"
-                >{{LINK_PORTAL}}</a
-              ></strong
-            >
-          </li>
-          <li>Revisar a documentação enviada</li>
-          <li>Preparar informações adicionais se necessário</li>
-          <li>Acompanhar o status em tempo real</li>
-        </ul>
+        <p style="margin: 5px 0">
+          <strong>Próxima Etapa:</strong> {{PROXIMA_ETAPA}}
+        </p>
+        <p style="margin: 5px 0">
+          <strong>Previsão:</strong> {{PREVISAO_PROXIMA_ETAPA}}
+        </p>
+        <p style="margin: 5px 0">
+          <strong>Responsável:</strong> {{RESPONSAVEL_PROXIMA_ETAPA}}
+        </p>
+      </div>
+      <div
+        style="
+          background-color: #f8f9fa;
+          border: 1px solid #a29bfe;
+          color: #2d3436;
+          padding: 15px;
+          border-radius: 5px;
+          margin: 20px 0;
+        "
+      >
+        <h3 style="margin-top: 0">🔍 Detalhes Adicionais</h3>
+        <p><strong>Observações:</strong> {{OBSERVACOES}}</p>
+        <p>
+          <strong>Documentação:</strong>
+          <a href="{{LINK_DOCUMENTACAO}}" style="color: #2d3436"
+            >{{LINK_DOCUMENTACAO}}</a
+          >
+        </p>
       </div>
       <div
         style="
@@ -250,29 +222,24 @@
           margin: 20px 0;
         "
       >
-        <h3 style="margin-top: 0">📞 Precisa de Ajuda?</h3>
-        <p>Nossa equipe está disponível para esclarecer dúvidas:</p>
+        <h3 style="margin-top: 0">📞 Contato</h3>
+        <p>Para dúvidas sobre este projeto:</p>
         <ul style="padding-left: 20px; margin: 0">
           <li>
             <strong>Email:</strong>
-            <a href="mailto:{{EMAIL_SUPORTE}}" style="color: #0c5460"
-              >{{EMAIL_SUPORTE}}</a
+            <a href="mailto:{{EMAIL_RESPONSAVEL}}" style="color: #0c5460"
+              >{{EMAIL_RESPONSAVEL}}</a
             >
           </li>
-          <li><strong>Telefone:</strong> {{TELEFONE_SUPORTE}}</li>
+          <li><strong>Telefone:</strong> {{TELEFONE_RESPONSAVEL}}</li>
           <li>
-            <strong>Chat Online:</strong>
-            <a href="{{LINK_CHAT}}" style="color: #0c5460">{{LINK_CHAT}}</a>
-          </li>
-          <li>
-            <strong>Documentação:</strong>
-            <a href="{{LINK_DOCS}}" style="color: #0c5460">{{LINK_DOCS}}</a>
+            <strong>Portal:</strong>
+            <a href="{{LINK_PORTAL}}" style="color: #0c5460">{{LINK_PORTAL}}</a>
           </li>
         </ul>
       </div>
       <p style="color: #34495e">
-        Obrigado por confiar em nosso sistema! Estamos ansiosos para trabalhar
-        no seu projeto.
+        Continuaremos mantendo você informado sobre o progresso do projeto.
       </p>
       <div
         style="
