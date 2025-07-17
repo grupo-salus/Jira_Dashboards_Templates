@@ -24,7 +24,6 @@
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       "
     >
-      <!-- Header com Logo -->
       <div
         style="
           background-color: #ffffff;
@@ -53,8 +52,6 @@
           </h1>
         </div>
       </div>
-
-      <!-- Conteúdo -->
       <div style="padding: 20px">
         <h2 style="color: #2c3e50">Parabéns, {{issue.customfield_10093}}!</h2>
         <p style="color: #495057">
@@ -228,7 +225,6 @@
             </table>
           </div>
         </div>
-        <!-- Seção: Benefícios Alcançados -->
         <div
           style="
             background-color: #e8f5e8;
@@ -302,8 +298,6 @@
             </table>
           </div>
         </div>
-
-        <!-- Seção: Cronograma de Entrega -->
         <div
           style="
             background-color: #fff3cd;
@@ -404,8 +398,6 @@
             </table>
           </div>
         </div>
-
-        <!-- Seção: Equipe e Agradecimentos -->
         <div
           style="
             background-color: #f8f9fa;
@@ -514,28 +506,29 @@
           <p>Para dúvidas sobre este projeto ou suporte pós-entrega:</p>
           <ul style="padding-left: 20px; margin: 0">
             <li>
-              <strong>Email de Suporte:</strong>
-              <a href="mailto:chamados@gruposalus.com.br" style="color: #0c5460"
+              <strong>Email de Suporte:</strong
+              ><a
+                href="mailto:chamados@gruposalus.com.br"
+                style="color: #0c5460"
                 >chamados@gruposalus.com.br</a
               >
             </li>
             <li>
-              <strong>Portal de Suporte:</strong>
-              <a
+              <strong>Portal de Suporte:</strong
+              ><a
                 href="https://suporte.gruposalus.com.br/"
                 style="color: #0c5460"
                 >https://suporte.gruposalus.com.br/</a
               >
             </li>
             <li>
-              <strong>Seu Projeto no Jira:</strong>
-              <a href="{{baseUrl}}/browse/{{issue.key}}" style="color: #0c5460"
+              <strong>Seu Projeto no Jira:</strong
+              ><a href="{{baseUrl}}/browse/{{issue.key}}" style="color: #0c5460"
                 >{{issue.key}}</a
               >
             </li>
           </ul>
         </div>
-        <!-- Seção: Avaliação NPS - DESTAQUE -->
         <div
           style="
             background-color: #f8f9fa;
@@ -591,18 +584,14 @@
                 display: inline-block;
                 transition: all 0.3s ease;
               "
+              >AVALIAR EXPERIÊNCIA - NPS</a
             >
-              AVALIAR EXPERIÊNCIA - NPS
-            </a>
           </div>
           <p style="font-size: 15px; margin: 15px 0; color: #34495e">
             Leva menos de 2 minutos e fará toda a diferença para a melhoria
             contínua do nosso trabalho. 💡
           </p>
         </div>
-
-       
-        <!-- Rodapé Padrão SALUS -->
         <div
           style="
             background-color: #033e3b;
@@ -625,8 +614,8 @@
             </tr>
             <tr>
               <td style="font-size: 14px; line-height: 1.4; padding: 5px 0">
-                <strong>Grupo Salus</strong><br />
-                Gestão de Projetos e Tecnologia
+                <strong>Grupo Salus</strong><br />Gestão de Projetos e
+                Tecnologia
               </td>
             </tr>
             <tr>
@@ -638,9 +627,8 @@
                   opacity: 0.8;
                 "
               >
-                Este é um email automático do sistema de gestão de projetos<br />
-                Data de envio: {{now}}<br />
-                Projeto: {{issue.key}} | Entregue em:
+                Este é um email automático do sistema de gestão de projetos<br />Data
+                de envio: {{now}}<br />Projeto: {{issue.key}} | Entregue em:
                 {{issue.customfield_10355}} | Solicitante:
                 {{issue.customfield_10093}}
               </td>
@@ -648,7 +636,6 @@
           </table>
         </div>
       </div>
-      <!-- Fim do conteúdo -->
     </div>
   </body>
 </html>
