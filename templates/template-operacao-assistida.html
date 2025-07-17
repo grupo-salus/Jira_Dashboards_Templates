@@ -178,12 +178,11 @@
           "
         >
           <h3 style="margin-top: 0">🔗 Acesso ao Sistema</h3>
-          <p>Link do sistema em produção:</p>
+          <p>Para mais detalhes acesse seu projeto no Jira:</p>
           <ul style="padding-left: 20px; margin: 0">
             <li>
-              <strong>Sistema em Produção:</strong
-              ><a href="{{baseUrl}}/browse/{{issue.key}}" style="color: #0c5460"
-                >Acessar projeto: {{issue.key}}</a
+              <a href="{{baseUrl}}/browse/{{issue.key}}" style="color: #0c5460"
+                >Clique aqui</a
               >
             </li>
           </ul>
@@ -265,8 +264,9 @@
                 "
               >
                 Este é um email automático do sistema de gestão de projetos<br />Data
-                                 de envio: {{now.format("dd/MM/yyyy")}}<br />Projeto: {{issue.key}} | Operação
-                Assistida | Solicitante: {{issue.customfield_10093}}
+                de envio: {{now.format("dd/MM/yyyy")}}<br />Projeto:
+                {{issue.key}} | Operação Assistida | Solicitante:
+                {{issue.customfield_10093}}
               </td>
             </tr>
           </table>
