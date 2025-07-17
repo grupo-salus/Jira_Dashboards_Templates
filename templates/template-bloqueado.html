@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Bloqueado</title>
+  </head>
+  <body
+    style="
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    "
+  >
+    <div
+      style="
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      "
+    >
+      <div
+        style="
+          background-color: #e67e22;
+          background: linear-gradient(135deg, #e67e22 0%, #f39c12 100%);
+          color: white;
+          padding: 20px;
+          text-align: center;
+          border-radius: 10px 10px 0 0;
+          margin: -20px -20px 20px -20px;
+        "
+      >
+        <h1 style="margin: 0; padding: 0">🚧 Projeto Bloqueado</h1>
+      </div>
+      <div style="text-align: center; font-size: 42px; margin: 20px 0">
+        ⚠️🚧⏸️
+      </div>
+      <h2 style="color: #2c3e50">Olá, {{NOME_USUARIO}}</h2>
+      <p style="color: #34495e">
+        Informamos que seu projeto encontra-se temporariamente bloqueado devido
+        a impedimentos técnicos ou organizacionais.
+      </p>
+      <div style="margin: 20px 0; text-align: left">
+        <span
+          style="
+            background-color: #e67e22;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+          "
+          >BLOQUEADO</span
+        >
+      </div>
+      <div
+        style="
+          background-color: #ecf0f1;
+          padding: 15px;
+          border-radius: 5px;
+          margin: 20px 0;
+        "
+      >
+        <h3 style="margin-top: 0; margin-bottom: 15px; color: #2c3e50">
+          📋 Informações do Projeto
+        </h3>
+        <div
+          style="
+            background-color: #fff;
+            border: 1px solid #e1e5e9;
+            border-radius: 5px;
+            padding: 15px;
+          "
+        >
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  width: 150px;
+                "
+              >
+                <strong style="color: #34495e">Nome do Projeto:</strong>
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{NOME_PROJETO}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
+                <strong style="color: #34495e">Data do Bloqueio:</strong>
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{DATA_BLOQUEIO}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
+                <strong style="color: #34495e">Responsável:</strong>
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{RESPONSAVEL_BLOQUEIO}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
+                <strong style="color: #34495e">Fase Bloqueada:</strong>
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{FASE_BLOQUEADA}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0">
+                <strong style="color: #34495e">Ticket de Bloqueio:</strong>
+              </td>
+              <td style="padding: 8px 0; color: #2c3e50">
+                {{TICKET_BLOQUEIO}}
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div
+        style="
+          background-color: #fdf2e9;
+          border: 1px solid #f39c12;
+          color: #7d6608;
+          padding: 15px;
+          border-radius: 5px;
+          margin: 20px 0;
+        "
+      >
+        <h3 style="margin-top: 0">🚧 Detalhes do Bloqueio</h3>
+        <p><strong>Tipo de Bloqueio:</strong> {{TIPO_BLOQUEIO}}</p>
+        <p><strong>Descrição:</strong> {{DESCRICAO_BLOQUEIO}}</p>
+        <p><strong>Impacto:</strong> {{IMPACTO_BLOQUEIO}}</p>
+        <p>
+          <strong>Prioridade de Resolução:</strong> {{PRIORIDADE_RESOLUCAO}}
+        </p>
+      </div>
+      <div
+        style="
+          background-color: #fff3cd;
+          border: 1px solid #ffeaa7;
+          color: #856404;
+          padding: 15px;
+          border-radius: 5px;
+          margin: 20px 0;
+        "
+      >
+        <h3 style="margin-top: 0">🔧 Plano de Resolução</h3>
+        <p><strong>Ação Necessária:</strong> {{ACAO_NECESSARIA}}</p>
+        <p>
+          <strong>Responsável pela Resolução:</strong> {{RESPONSAVEL_RESOLUCAO}}
+        </p>
+        <p><strong>Prazo Estimado:</strong> {{PRAZO_RESOLUCAO}}</p>
+        <p><strong>Status da Resolução:</strong> {{STATUS_RESOLUCAO}}</p>
+      </div>
+      <div
+        style="
+          background-color: #f8f9fa;
+          border: 1px solid #a29bfe;
+          color: #2d3436;
+          padding: 15px;
+          border-radius: 5px;
+          margin: 20px 0;
+        "
+      >
+        <h3 style="margin-top: 0">📊 Impacto no Cronograma</h3>
+        <p><strong>Atraso Estimado:</strong> {{ATRASO_ESTIMADO}}</p>
+        <p><strong>Tarefas Afetadas:</strong> {{TAREFAS_AFETADAS}}</p>
+        <p><strong>Recursos Impactados:</strong> {{RECURSOS_IMPACTADOS}}</p>
+        <p><strong>Custos Adicionais:</strong> {{CUSTOS_ADICIONAIS}}</p>
+      </div>
+      <div
+        style="
+          background-color: #e8f5e8;
+          border: 1px solid #4caf50;
+          color: #2e7d32;
+          padding: 15px;
+          border-radius: 5px;
+          margin: 20px 0;
+        "
+      >
+        <h3 style="margin-top: 0">✅ Ações em Andamento</h3>
+        <p>
+          Nossa equipe está trabalhando ativamente para resolver o bloqueio:
+        </p>
+        <ul style="padding-left: 20px; margin: 0">
+          <li>Análise detalhada do impedimento</li>
+          <li>Definição de plano de ação</li>
+          <li>Coordenação com áreas envolvidas</li>
+          <li>Monitoramento contínuo do progresso</li>
+        </ul>
+      </div>
+      <div
+        style="
+          background-color: #d1ecf1;
+          border: 1px solid #b8daff;
+          color: #0c5460;
+          padding: 15px;
+          border-radius: 5px;
+          margin: 20px 0;
+        "
+      >
+        <h3 style="margin-top: 0">📞 Contatos</h3>
+        <p>Para acompanhar a resolução do bloqueio:</p>
+        <ul style="padding-left: 20px; margin: 0">
+          <li>
+            <strong>Responsável:</strong>
+            <a href="mailto:{{EMAIL_RESPONSAVEL}}" style="color: #0c5460"
+              >{{EMAIL_RESPONSAVEL}}</a
+            >
+          </li>
+          <li>
+            <strong>Gerente do Projeto:</strong>
+            <a href="mailto:{{EMAIL_GERENTE}}" style="color: #0c5460"
+              >{{EMAIL_GERENTE}}</a
+            >
+          </li>
+          <li>
+            <strong>Suporte Técnico:</strong>
+            <a href="mailto:{{EMAIL_SUPORTE}}" style="color: #0c5460"
+              >{{EMAIL_SUPORTE}}</a
+            >
+          </li>
+          <li>
+            <strong>Ticket de Acompanhamento:</strong>
+            <a href="{{LINK_TICKET}}" style="color: #0c5460">{{LINK_TICKET}}</a>
+          </li>
+        </ul>
+      </div>
+      <p style="color: #34495e">
+        Você será notificado assim que o bloqueio for resolvido e o projeto
+        retomar o andamento normal.
+      </p>
+      <div
+        style="
+          text-align: center;
+          color: #7f8c8d;
+          font-size: 12px;
+          margin-top: 30px;
+          padding-top: 20px;
+          border-top: 1px solid #ecf0f1;
+        "
+      >
+        <p style="margin: 5px 0">
+          Este é um email automático do sistema de gestão de projetos.
+        </p>
+        <p style="margin: 5px 0">Data de envio: {{DATA_ENVIO}}</p>
+        <p style="margin: 5px 0">
+          Projeto ID: {{ID_PROJETO}} | Protocolo: {{PROTOCOLO}}
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

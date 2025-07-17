@@ -1,0 +1,273 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 350px;
+  background: #2c3e50;
+  color: white;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h1 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ecf0f1;
+  font-size: 18px;
+}
+
+.template-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.template-item {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.template-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.template-item.active {
+  background: #3498db;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.template-btn {
+  width: 100%;
+  padding: 15px;
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.template-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.template-item.active .template-btn {
+  background: none;
+}
+
+.status-badge {
+  font-size: 10px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.header {
+  background: white;
+  padding: 20px;
+  border-bottom: 1px solid #e1e5e9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 20px;
+}
+
+.navigation-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-btn:hover {
+  background: #2980b9;
+}
+
+.nav-btn:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.template-viewer {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.template-frame {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e1e5e9;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.template-info {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 4px solid #3498db;
+}
+
+.template-info h3 {
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+}
+
+.template-info p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #7f8c8d;
+  font-size: 16px;
+}
+
+.error {
+  color: #e74c3c;
+  background: #fadbd8;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #e74c3c;
+  margin: 20px 0;
+}
+
+/* Cores específicas para cada status */
+.projeto-criado .status-badge {
+  background-color: #6c5ce7;
+}
+.ideacao .status-badge {
+  background-color: #e74c3c;
+}
+.analise .status-badge {
+  background-color: #8e44ad;
+}
+.backlog .status-badge {
+  background-color: #e67e22;
+}
+.desenvolvimento .status-badge {
+  background-color: #2980b9;
+}
+.homologacao .status-badge {
+  background-color: #d35400;
+}
+.operacao .status-badge {
+  background-color: #229954;
+}
+.entregue .status-badge {
+  background-color: #27ae60;
+}
+.cancelado .status-badge {
+  background-color: #c0392b;
+}
+.bloqueado .status-badge {
+  background-color: #e67e22;
+}
+
+.keyboard-shortcuts {
+  margin-top: 30px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.keyboard-shortcuts h4 {
+  margin: 0 0 10px 0;
+  color: #ecf0f1;
+  font-size: 14px;
+}
+
+.keyboard-shortcuts p {
+  margin: 5px 0;
+  font-size: 12px;
+  color: #bdc3c7;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+}
+
+.mobile-menu-btn {
+  display: none;
+}

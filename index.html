@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Notificações - Visualizador de Templates</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+
+    <div class="sidebar" id="sidebar">
+      <h1>📧 Templates de Notificação</h1>
+
+      <ul class="template-list">
+        <li
+          class="template-item projeto-criado active"
+          data-template="projeto-criado"
+        >
+          <button class="template-btn" onclick="loadTemplate('projeto-criado')">
+            <span>1.</span>
+            <div>
+              <div>Projeto Criado</div>
+              <div class="status-badge">PROJETO CRIADO</div>
+            </div>
+          </button>
+        </li>
+
+        <li class="template-item ideacao" data-template="ideacao">
+          <button class="template-btn" onclick="loadTemplate('ideacao')">
+            <span>2.</span>
+            <div>
+              <div>Ideação</div>
+              <div class="status-badge">IDEAÇÃO</div>
+            </div>
+          </button>
+        </li>
+
+        <li class="template-item analise" data-template="analise">
+          <button class="template-btn" onclick="loadTemplate('analise')">
+            <span>3.</span>
+            <div>
+              <div>Análise Técnica</div>
+              <div class="status-badge">ANÁLISE TÉCNICA</div>
+            </div>
+          </button>
+        </li>
+
+        <li class="template-item backlog" data-template="backlog">
+          <button class="template-btn" onclick="loadTemplate('backlog')">
+            <span>4.</span>
+            <div>
+              <div>Backlog Priorizado</div>
+              <div class="status-badge">BACKLOG PRIORIZADO</div>
+            </div>
+          </button>
+        </li>
+
+        <li
+          class="template-item desenvolvimento"
+          data-template="desenvolvimento"
+        >
+          <button
+            class="template-btn"
+            onclick="loadTemplate('desenvolvimento')"
+          >
+            <span>5.</span>
+            <div>
+              <div>Em Desenvolvimento</div>
+              <div class="status-badge">EM DESENVOLVIMENTO</div>
+            </div>
+          </button>
+        </li>
+
+        <li class="template-item homologacao" data-template="homologacao">
+          <button class="template-btn" onclick="loadTemplate('homologacao')">
+            <span>6.</span>
+            <div>
+              <div>Em Homologação</div>
+              <div class="status-badge">EM HOMOLOGAÇÃO</div>
+            </div>
+          </button>
+        </li>
+
+        <li class="template-item operacao" data-template="operacao">
+          <button class="template-btn" onclick="loadTemplate('operacao')">
+            <span>7.</span>
+            <div>
+              <div>Operação Assistida</div>
+              <div class="status-badge">OPERAÇÃO ASSISTIDA</div>
+            </div>
+          </button>
+        </li>
+
+        <li class="template-item entregue" data-template="entregue">
+          <button class="template-btn" onclick="loadTemplate('entregue')">
+            <span>8.</span>
+            <div>
+              <div>Entregue</div>
+              <div class="status-badge">ENTREGUE</div>
+            </div>
+          </button>
+        </li>
+
+        <li class="template-item cancelado" data-template="cancelado">
+          <button class="template-btn" onclick="loadTemplate('cancelado')">
+            <span>9.</span>
+            <div>
+              <div>Cancelado</div>
+              <div class="status-badge">CANCELADO</div>
+            </div>
+          </button>
+        </li>
+
+        <li class="template-item bloqueado" data-template="bloqueado">
+          <button class="template-btn" onclick="loadTemplate('bloqueado')">
+            <span>10.</span>
+            <div>
+              <div>Bloqueado</div>
+              <div class="status-badge">BLOQUEADO</div>
+            </div>
+          </button>
+        </li>
+      </ul>
+
+      <div class="keyboard-shortcuts">
+        <h4>⌨️ Atalhos do Teclado</h4>
+        <p>← → : Navegar entre templates</p>
+        <p>1-9, 0 : Ir para template específico</p>
+        <p>ESC : Fechar menu (mobile)</p>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="header">
+        <h2 id="currentTitle">Template: Projeto Criado</h2>
+        <div class="navigation-controls">
+          <button class="nav-btn" id="prevBtn" onclick="previousTemplate()">
+            ← Anterior
+          </button>
+          <button class="nav-btn" id="nextBtn" onclick="nextTemplate()">
+            Próximo →
+          </button>
+        </div>
+      </div>
+
+      <div class="template-viewer">
+        <div class="template-info" id="templateInfo">
+          <h3>Template: Projeto Criado</h3>
+          <p>
+            Este template é usado quando um novo projeto é criado e cadastrado
+            no sistema.
+          </p>
+        </div>
+
+        <div class="loading" id="loading" style="display: none">
+          Carregando template...
+        </div>
+
+        <div class="error" id="error" style="display: none">
+          Erro ao carregar o template. Verifique se o arquivo existe.
+        </div>
+
+        <iframe
+          class="template-frame"
+          id="templateFrame"
+          src="templates/template-projeto-criado.html"
+        ></iframe>
+      </div>
+    </div>
+
+    <script type="module" src="assets/js/app.js"></script>
+  </body>
+</html>
