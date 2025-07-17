@@ -14,7 +14,7 @@ Um sistema simples e elegante para visualizar templates HTML de notificações d
 ## 📁 Estrutura do Projeto
 
 ```
-testestes/
+Jira_Dashboards_Templates/
 ├── assets/
 │   ├── css/
 │   │   └── main.css          # Estilos principais
@@ -35,7 +35,6 @@ testestes/
 │   ├── template-cancelado.html
 │   └── template-bloqueado.html
 ├── index.html               # Arquivo principal
-├── package.json            # Dependências e scripts
 └── README.md               # Este arquivo
 ```
 
@@ -43,33 +42,22 @@ testestes/
 
 ### Pré-requisitos
 
-- Node.js (opcional, para servidor local)
+- VS Code com extensão Live Server
+- Extensão MinifyAll para VS Code
 
 ### Instalação
 
 1. Clone ou baixe o projeto
-2. Navegue até a pasta do projeto
-3. (Opcional) Instale as dependências de desenvolvimento:
-   ```bash
-   npm install
-   ```
+2. Abra a pasta no VS Code
+3. Instale a extensão **Live Server** no VS Code
+4. Instale a extensão **MinifyAll** no VS Code
 
 ### Executar
 
-**Opção 1: Servidor local (recomendado)**
-
-```bash
-npm run dev
-```
-
-**Opção 2: Servidor simples**
-
-```bash
-npm start
-```
-
-**Opção 3: Abrir diretamente**
-Abra o arquivo `index.html` em seu navegador.
+1. Abra o arquivo `index.html` no VS Code
+2. Clique com o botão direito no arquivo
+3. Selecione "Open with Live Server"
+4. O projeto será aberto no navegador automaticamente
 
 ## ⌨️ Atalhos de Teclado
 
@@ -128,7 +116,27 @@ Edite o arquivo `assets/css/main.css` para personalizar a aparência.
 
 ## 📝 Uso com Jira Automation
 
-Este sistema é ideal para visualizar templates que serão usados em scripts de automação do Jira. Os templates HTML podem ser facilmente integrados em workflows de automação.
+### Configuração no Jira
+
+1. Acesse o [Jira Automation](https://tigruposalus.atlassian.net/jira/software/c/projects/EP/settings/automate#/rule-list?systemLabelId=project&page=1&pageSize=20&sortKey=name&sortOrder=ASC)
+2. Navegue até a seção de **Emails**
+3. Configure suas regras de automação
+
+### Preparando Templates para Email
+
+Para usar os templates no Jira Automation, é necessário comprimir o HTML em uma única linha:
+
+1. **Instale a extensão MinifyAll** no VS Code
+2. **Abra o template HTML** que deseja usar
+3. **Clique com o botão direito** no arquivo
+4. **Selecione a opção de minificação** da extensão MinifyAll
+5. **Um novo arquivo será criado** com o HTML comprimido em uma única linha
+6. **Copie o conteúdo** do arquivo minificado
+7. **Cole no campo de template** do Jira Automation
+
+### Por que Minificar?
+
+Os templates HTML precisam estar em uma única linha para funcionar corretamente nos scripts de automação do Jira. A extensão MinifyAll facilita esse processo automaticamente.
 
 ## 🤝 Contribuição
 
@@ -140,4 +148,4 @@ Este sistema é ideal para visualizar templates que serão usados em scripts de 
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo `package.json` para detalhes.
+Este projeto está sob a licença MIT.
