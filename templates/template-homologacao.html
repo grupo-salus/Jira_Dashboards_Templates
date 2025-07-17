@@ -109,7 +109,7 @@
                     color: #2c3e50;
                   "
                 >
-                  {{NOME_PROJETO}}
+                  {{issue.summary}}
                 </td>
               </tr>
               <tr>
@@ -123,7 +123,7 @@
                     color: #2c3e50;
                   "
                 >
-                  {{AMBIENTE_TESTE}}
+                  {{issue.customfield_10356}}
                 </td>
               </tr>
               <tr>
@@ -137,7 +137,7 @@
                     color: #2c3e50;
                   "
                 >
-                  {{TESTER_RESPONSAVEL}}
+                  {{issue.customfield_10413}}
                 </td>
               </tr>
               <tr>
@@ -151,7 +151,7 @@
                     color: #2c3e50;
                   "
                 >
-                  {{DATA_INICIO_TESTES}}
+                  {{issue.customfield_10351.format("dd/MM/yyyy")}}
                 </td>
               </tr>
               <tr>
@@ -159,7 +159,7 @@
                   <strong style="color: #34495e">Prazo de Homologação:</strong>
                 </td>
                 <td style="padding: 8px 0; color: #2c3e50">
-                  {{PRAZO_HOMOLOGACAO}}
+                  {{issue.customfield_10352.format("dd/MM/yyyy")}}
                 </td>
               </tr>
             </table>
@@ -263,8 +263,9 @@
                 "
               >
                 Este é um email automático do sistema de gestão de projetos<br />Data
-                                 de envio: {{now.format("dd/MM/yyyy")}}<br />Projeto: {{issue.key}} | Homologação |
-                Solicitante: {{issue.customfield_10093}}
+                de envio: {{now.format("dd/MM/yyyy")}}<br />Projeto:
+                {{issue.key}} | Homologação | Solicitante:
+                {{issue.customfield_10093}}
               </td>
             </tr>
           </table>
