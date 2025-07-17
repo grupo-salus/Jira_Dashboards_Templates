@@ -127,7 +127,7 @@
                     color: #2c3e50;
                   "
                 >
-                  {{issue.created}}
+                  {{issue.created.format("dd/MM/yyyy")}}
                 </td>
               </tr>
               <tr>
@@ -141,7 +141,7 @@
                     color: #2c3e50;
                   "
                 >
-                  {{issue.customfield_10355}}
+                  {{issue.customfield_10355.format("dd/MM/yyyy")}}
                 </td>
               </tr>
               <tr>
@@ -155,7 +155,7 @@
                     color: #2c3e50;
                   "
                 >
-                  {{issue.resolutiondate}}
+                  {{issue.resolutiondate.format("dd/MM/yyyy")}}
                 </td>
               </tr>
               <tr>
@@ -197,7 +197,7 @@
                     color: #2c3e50;
                   "
                 >
-                  {{issue.priority}}
+                  {{issue.priority.name}}
                 </td>
               </tr>
               <tr>
@@ -338,7 +338,7 @@
                     color: #2c3e50;
                   "
                 >
-                  {{issue.customfield_10349}}
+                  {{issue.customfield_10349.format("dd/MM/yyyy")}}
                 </td>
               </tr>
               <tr>
@@ -354,7 +354,7 @@
                     color: #2c3e50;
                   "
                 >
-                  {{issue.customfield_10350}}
+                  {{issue.customfield_10350.format("dd/MM/yyyy")}}
                 </td>
               </tr>
               <tr>
@@ -370,7 +370,8 @@
                     color: #2c3e50;
                   "
                 >
-                  {{issue.customfield_10351}} - {{issue.customfield_10352}}
+                  {{issue.customfield_10351.format("dd/MM/yyyy")}} -
+                  {{issue.customfield_10352.format("dd/MM/yyyy")}}
                 </td>
               </tr>
               <tr>
@@ -384,7 +385,8 @@
                     color: #2c3e50;
                   "
                 >
-                  {{issue.customfield_10353}} - {{issue.customfield_10354}}
+                  {{issue.customfield_10353.format("dd/MM/yyyy")}} -
+                  {{issue.customfield_10354.format("dd/MM/yyyy")}}
                 </td>
               </tr>
               <tr>
@@ -392,7 +394,7 @@
                   <strong style="color: #34495e">Entrega Final:</strong>
                 </td>
                 <td style="padding: 8px 0; color: #2c3e50">
-                  {{issue.customfield_10355}}
+                  {{issue.customfield_10355.format("dd/MM/yyyy")}}
                 </td>
               </tr>
             </table>
@@ -628,8 +630,8 @@
                 "
               >
                 Este é um email automático do sistema de gestão de projetos<br />Data
-                de envio: {{now}}<br />Projeto: {{issue.key}} | Entregue em:
-                {{issue.customfield_10355}} | Solicitante:
+                                 de envio: {{now.format("dd/MM/yyyy")}}<br />Projeto: {{issue.key}} | Entregue em:
+                {{issue.customfield_10355.format("dd/MM/yyyy")}} | Solicitante:
                 {{issue.customfield_10093}}
               </td>
             </tr>

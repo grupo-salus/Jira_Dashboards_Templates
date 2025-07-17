@@ -153,7 +153,7 @@
                     color: #2c3e50;
                   "
                 >
-                  {{issue.customfield_10347}}
+                  {{issue.customfield_10347.format("dd/MM/yyyy")}}
                 </td>
               </tr>
               <tr>
@@ -180,7 +180,7 @@
           <h3 style="margin-top: 0">📅 Cronograma do Projeto</h3>
           <p>
             <strong>Data Prevista para Desenvolvimento:</strong>
-            {{issue.customfield_10349}}
+            {{issue.customfield_10349.format("dd/MM/yyyy")}}
           </p>
         </div>
         <div
@@ -259,8 +259,9 @@
                 "
               >
                 Este é um email automático do sistema de gestão de projetos<br />Data
-                de envio: {{now}}<br />Projeto: {{issue.key}} | Backlog
-                Priorizado | Solicitante: {{issue.customfield_10093}}
+                de envio: {{now.format("dd/MM/yyyy")}}<br />Projeto:
+                {{issue.key}} | Backlog Priorizado | Solicitante:
+                {{issue.customfield_10093}}
               </td>
             </tr>
           </table>
