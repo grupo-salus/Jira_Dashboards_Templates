@@ -1,0 +1,144 @@
+
+{
+
+  // Campos padrão do Jira
+
+  "Chave": "{{issue.key}}",
+
+  "Título": "{{issue.summary}}",
+
+  "Descrição": "{{issue.description}}",
+
+  "Prioridade": "{{issue.priority.name}}",
+
+  "Status": "{{issue.status.name}}",
+
+  "Responsável": "{{issue.assignee.displayName}}",
+
+  "Relator": "{{issue.creator.displayName}}",
+
+  "Data de criação": "{{issue.created}}",
+
+  "Data de atualização": "{{issue.updated}}",
+
+  "Data de término": "{{issue.resolutiondate}}",
+
+  "Estimativa original (segundos)": "{{issue.timetracking.originalEstimateSeconds}}",
+
+  "Tempo registrado (segundos)": "{{issue.timetracking.timeSpentSeconds}}",
+
+  "Tempo restante (segundos)": "{{issue.timetracking.remainingEstimateSeconds}}",
+
+  "Squads": "{{issue.customfield_10377}}",
+
+
+
+  // Campos customizados
+
+  "Nome do Solicitante": "{{issue.customfield_10093}}",
+
+  "Grupo Solicitante": "{{issue.customfield_10083.value}}",
+
+  "Departamento Solicitante": "{{issue.customfield_10245.value}}",
+
+  "Diretor Responsável": "{{issue.customfield_10250}}",
+
+  "Email do Solicitante": "{{issue.customfield_10247}}",
+
+  "Telefone do Solicitante": "{{issue.customfield_10246}}",
+
+  "Objetivo do Projeto": "{{issue.customfield_10481}}",
+
+  "Escopo Inicial": "{{issue.customfield_10476}}",
+
+  "Stakeholders": "{{issue.customfield_10477}}",
+
+  "Tipo de Projeto": "{{issue.customfield_10478}}",
+
+  "Prazo Desejado": "{{issue.customfield_10479}}",
+
+  "Impacto Esperado": "{{issue.customfield_10480}}",
+
+  "Benefícios Esperados": "{{issue.customfield_10248}}",
+
+  "Riscos Conhecidos": "{{issue.customfield_10482}}",
+
+  "Estimativa de Custo": "{{issue.customfield_10483}}",
+
+  "Orçamento Reservado": "{{issue.customfield_10484}}",
+
+  "Observações Adicionais": "{{issue.customfield_10485}}",
+
+  "Confirmação de Responsabilidade": "{{issue.customfield_10486}}",
+
+  "Responsável Atual": "{{issue.customfield_10413.value}}",
+
+  "Investimento Esperado": "{{issue.customfield_10249}}",
+
+  "Motivo para Cancelamento de Projeto": "{{issue.customfield_10412.value}}",
+
+  "Motivo para Bloqueio de Projeto": "{{issue.customfield_10344.value}}",
+
+
+
+  // Datas por fase
+
+  "Target start": "{{issue.customfield_10022}}",
+
+  "Target end": "{{issue.customfield_10023}}",
+
+  "Data: Início Ideação": "{{issue.customfield_10345}}",
+
+  "Data: Fim Ideação": "{{issue.customfield_10346}}",
+
+  "Data: Início Análise técnica e negócios": "{{issue.customfield_10410}}",
+
+  "Data: Fim Análise técnica e negócios": "{{issue.customfield_10411}}",
+
+  "Data: Início Backlog priorizado": "{{issue.customfield_10347}}",
+
+  "Data: Fim Backlog priorizado": "{{issue.customfield_10348}}",
+
+  "Data: Início Em desenvolvimento": "{{issue.customfield_10349}}",
+
+  "Data: Fim Em desenvolvimento": "{{issue.customfield_10350}}",
+
+  "Data: Início Em homologação": "{{issue.customfield_10351}}",
+
+  "Data: Fim Em homologação": "{{issue.customfield_10352}}",
+
+  "Data: Início Operação assistida": "{{issue.customfield_10353}}",
+
+  "Data: Fim Operação assistida": "{{issue.customfield_10354}}",
+
+  "Data: Início Entregue": "{{issue.customfield_10355}}",
+
+  "Data: Fim Entregue": "{{issue.customfield_10356}}",
+
+  "Data: Início Cancelado": "{{issue.customfield_10357}}",
+
+  "Data: Fim Cancelado": "{{issue.customfield_10358}}",
+
+  "Data: Início Bloqueado": "{{issue.customfield_10359}}",
+
+  "Data: Fim Bloqueado": "{{issue.customfield_10360}}"
+
+}
+
+
+
+
+
+pra dados de suporte e contanto use
+
+
+
+@https://suporte.gruposalus.com.br/ 
+
+
+
+ou email
+
+
+
+chamados@gruposalus.com.br

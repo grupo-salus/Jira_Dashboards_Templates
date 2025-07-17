@@ -243,6 +243,39 @@
           </li>
         </ul>
       </div>
+      <div
+        style="
+          background-color: #d1ecf1;
+          border: 1px solid #b8daff;
+          color: #0c5460;
+          padding: 15px;
+          border-radius: 5px;
+          margin: 20px 0;
+        "
+      >
+        <h3 style="margin-top: 0">📞 Contato e Suporte</h3>
+        <p>Para dúvidas sobre este projeto:</p>
+        <ul style="padding-left: 20px; margin: 0">
+          <li>
+            <strong>Email de Suporte:</strong>
+            <a href="mailto:chamados@gruposalus.com.br" style="color: #0c5460"
+              >chamados@gruposalus.com.br</a
+            >
+          </li>
+          <li>
+            <strong>Portal de Suporte:</strong>
+            <a href="https://suporte.gruposalus.com.br/" style="color: #0c5460"
+              >https://suporte.gruposalus.com.br/</a
+            >
+          </li>
+          <li>
+            <strong>Seu Projeto no Jira:</strong>
+            <a href="{{baseUrl}}/browse/{{issue.key}}" style="color: #0c5460"
+              >{{issue.key}}</a
+            >
+          </li>
+        </ul>
+      </div>
       <p style="color: #34495e">
         Você será notificado sobre o resultado da homologação assim que os
         testes forem concluídos.
@@ -260,9 +293,10 @@
         <p style="margin: 5px 0">
           Este é um email automático do sistema de gestão de projetos.
         </p>
-        <p style="margin: 5px 0">Data de envio: {{DATA_ENVIO}}</p>
+        <p style="margin: 5px 0">Data de envio: {{now}}</p>
         <p style="margin: 5px 0">
-          Projeto ID: {{ID_PROJETO}} | Protocolo: {{PROTOCOLO}}
+          Projeto: {{issue.key}} | Criado em: {{issue.created}} | Solicitante:
+          {{issue.customfield_10093}}
         </p>
       </div>
     </div>

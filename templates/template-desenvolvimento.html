@@ -40,10 +40,9 @@
       <div style="text-align: center; font-size: 42px; margin: 20px 0">
         💻🔧⚙️
       </div>
-      <h2 style="color: #2c3e50">Olá, {{NOME_USUARIO}}!</h2>
+      <h2 style="color: #2c3e50">Olá, {{issue.customfield_10093}}!</h2>
       <p style="color: #34495e">
-        Ótimas notícias! Seu projeto está em desenvolvimento ativo pela nossa
-        equipe.
+        Ótimas notícias! Seu projeto <strong>{{issue.summary}}</strong> está em desenvolvimento ativo pela nossa equipe.
       </p>
       <div style="margin: 20px 0; text-align: left">
         <span
@@ -96,12 +95,12 @@
                   color: #2c3e50;
                 "
               >
-                {{NOME_PROJETO}}
+                {{issue.summary}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                <strong style="color: #34495e">Sprint Atual:</strong>
+                <strong style="color: #34495e">Status Atual:</strong>
               </td>
               <td
                 style="
@@ -110,12 +109,12 @@
                   color: #2c3e50;
                 "
               >
-                {{SPRINT_ATUAL}}
+                {{issue.status}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                <strong style="color: #34495e">Progresso:</strong>
+                <strong style="color: #34495e">Solicitante:</strong>
               </td>
               <td
                 style="
@@ -124,12 +123,12 @@
                   color: #2c3e50;
                 "
               >
-                {{PROGRESSO}}%
+                {{issue.customfield_10093}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                <strong style="color: #34495e">Data de Início:</strong>
+                <strong style="color: #34495e">Responsável Atual:</strong>
               </td>
               <td
                 style="
@@ -138,39 +137,47 @@
                   color: #2c3e50;
                 "
               >
-                {{DATA_INICIO}}
+                {{issue.customfield_10413}}
               </td>
             </tr>
             <tr>
-              <td style="padding: 8px 0">
-                <strong style="color: #34495e">Entrega Prevista:</strong>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
+                <strong style="color: #34495e">Entrada no Desenvolvimento:</strong>
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{issue.customfield_10349}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
+                <strong style="color: #34495e">Prioridade:</strong>
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{issue.priority}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; vertical-align: top">
+                <strong style="color: #34495e">Descrição:</strong>
               </td>
               <td style="padding: 8px 0; color: #2c3e50">
-                {{ENTREGA_PREVISTA}}
+                {{issue.description}}
               </td>
             </tr>
           </table>
         </div>
-      </div>
-      <div
-        style="
-          background-color: #e8f5e8;
-          border: 1px solid #4caf50;
-          color: #2e7d32;
-          padding: 15px;
-          border-radius: 5px;
-          margin: 20px 0;
-        "
-      >
-        <h3 style="margin-top: 0">🚀 Progresso Atual</h3>
-        <p>
-          <strong>Funcionalidades Concluídas:</strong>
-          {{FUNCIONALIDADES_CONCLUIDAS}}
-        </p>
-        <p>
-          <strong>Em Desenvolvimento:</strong> {{FUNCIONALIDADES_ANDAMENTO}}
-        </p>
-        <p><strong>Próximas Sprints:</strong> {{PROXIMAS_SPRINTS}}</p>
       </div>
       <div
         style="
@@ -182,11 +189,37 @@
           margin: 20px 0;
         "
       >
-        <h3 style="margin-top: 0">👥 Equipe Trabalhando</h3>
-        <p><strong>Scrum Master:</strong> {{SCRUM_MASTER}}</p>
-        <p><strong>Product Owner:</strong> {{PRODUCT_OWNER}}</p>
-        <p><strong>Desenvolvedores:</strong> {{DESENVOLVEDORES}}</p>
-        <p><strong>Testadores:</strong> {{TESTADORES}}</p>
+        <h3 style="margin-top: 0">💻 Desenvolvimento em Andamento</h3>
+        <p>
+          Nesta fase, estamos implementando as funcionalidades definidas na análise técnica. Atividades em andamento:
+        </p>
+        <ul style="padding-left: 20px; margin: 0">
+          <li>Implementação de código</li>
+          <li>Testes unitários</li>
+          <li>Integração de componentes</li>
+          <li>Revisão de código</li>
+        </ul>
+      </div>
+      <div
+        style="
+          background-color: #e8f5e8;
+          border: 1px solid #4caf50;
+          color: #2e7d32;
+          padding: 15px;
+          border-radius: 5px;
+          margin: 20px 0;
+        "
+      >
+        <h3 style="margin-top: 0">📝 Próximos Passos</h3>
+        <p style="margin: 5px 0">
+          <strong>Próxima Etapa:</strong> Homologação
+        </p>
+        <p style="margin: 5px 0">
+          <strong>Responsável:</strong> {{issue.customfield_10413}}
+        </p>
+        <p style="margin-top: 15px; font-size: 14px">
+          Você será notificado quando o projeto avançar para a próxima fase.
+        </p>
       </div>
       <div
         style="
@@ -214,34 +247,29 @@
           margin: 20px 0;
         "
       >
-        <h3 style="margin-top: 0">🔗 Links Úteis</h3>
-        <p>Acompanhe o desenvolvimento:</p>
+        <h3 style="margin-top: 0">📞 Contato e Suporte</h3>
+        <p>Para dúvidas sobre este projeto:</p>
         <ul style="padding-left: 20px; margin: 0">
           <li>
-            <strong>Board do Projeto:</strong>
-            <a href="{{LINK_BOARD}}" style="color: #0c5460">{{LINK_BOARD}}</a>
-          </li>
-          <li>
-            <strong>Repositório:</strong>
-            <a href="{{LINK_REPOSITORIO}}" style="color: #0c5460"
-              >{{LINK_REPOSITORIO}}</a
+            <strong>Email de Suporte:</strong>
+            <a href="mailto:chamados@gruposalus.com.br" style="color: #0c5460"
+              >chamados@gruposalus.com.br</a
             >
           </li>
           <li>
-            <strong>Documentação:</strong>
-            <a href="{{LINK_DOCUMENTACAO}}" style="color: #0c5460"
-              >{{LINK_DOCUMENTACAO}}</a
+            <strong>Portal de Suporte:</strong>
+            <a href="https://suporte.gruposalus.com.br/" style="color: #0c5460"
+              >https://suporte.gruposalus.com.br/</a
             >
           </li>
           <li>
-            <strong>Demonstração:</strong>
-            <a href="{{LINK_DEMO}}" style="color: #0c5460">{{LINK_DEMO}}</a>
+            <strong>Seu Projeto no Jira:</strong>
+            <a href="{{baseUrl}}/browse/{{issue.key}}" style="color: #0c5460">{{issue.key}}</a>
           </li>
         </ul>
       </div>
       <p style="color: #34495e">
-        Você receberá atualizações regulares sobre o progresso do
-        desenvolvimento.
+        Você receberá atualizações regulares sobre o progresso do desenvolvimento.
       </p>
       <div
         style="
@@ -256,9 +284,9 @@
         <p style="margin: 5px 0">
           Este é um email automático do sistema de gestão de projetos.
         </p>
-        <p style="margin: 5px 0">Data de envio: {{DATA_ENVIO}}</p>
+        <p style="margin: 5px 0">Data de envio: {{now}}</p>
         <p style="margin: 5px 0">
-          Projeto ID: {{ID_PROJETO}} | Protocolo: {{PROTOCOLO}}
+          Projeto: {{issue.key}} | Entrada no Desenvolvimento: {{issue.customfield_10349}} | Solicitante: {{issue.customfield_10093}}
         </p>
       </div>
     </div>

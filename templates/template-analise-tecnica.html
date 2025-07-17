@@ -40,10 +40,9 @@
       <div style="text-align: center; font-size: 42px; margin: 20px 0">
         ⚙️📊🔍
       </div>
-      <h2 style="color: #2c3e50">Olá, {{NOME_USUARIO}}!</h2>
+      <h2 style="color: #2c3e50">Olá, {{issue.customfield_10093}}!</h2>
       <p style="color: #34495e">
-        Seu projeto está em análise técnica e de negócios pela nossa equipe
-        especializada.
+        Seu projeto <strong>{{issue.summary}}</strong> está em análise técnica e de negócios pela nossa equipe especializada.
       </p>
       <div style="margin: 20px 0; text-align: left">
         <span
@@ -84,7 +83,7 @@
                 style="
                   padding: 8px 0;
                   border-bottom: 1px solid #f1f3f4;
-                  width: 150px;
+                  width: 180px;
                 "
               >
                 <strong style="color: #34495e">Nome do Projeto:</strong>
@@ -96,12 +95,12 @@
                   color: #2c3e50;
                 "
               >
-                {{NOME_PROJETO}}
+                {{issue.summary}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                <strong style="color: #34495e">Analista Técnico:</strong>
+                <strong style="color: #34495e">Status Atual:</strong>
               </td>
               <td
                 style="
@@ -110,12 +109,12 @@
                   color: #2c3e50;
                 "
               >
-                {{ANALISTA_TECNICO}}
+                {{issue.status}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                <strong style="color: #34495e">Analista de Negócios:</strong>
+                <strong style="color: #34495e">Solicitante:</strong>
               </td>
               <td
                 style="
@@ -124,12 +123,12 @@
                   color: #2c3e50;
                 "
               >
-                {{ANALISTA_NEGOCIO}}
+                {{issue.customfield_10093}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                <strong style="color: #34495e">Data de Início:</strong>
+                <strong style="color: #34495e">Responsável Atual:</strong>
               </td>
               <td
                 style="
@@ -138,14 +137,44 @@
                   color: #2c3e50;
                 "
               >
-                {{DATA_INICIO_ANALISE}}
+                {{issue.customfield_10413}}
               </td>
             </tr>
             <tr>
-              <td style="padding: 8px 0">
-                <strong style="color: #34495e">Prazo Estimado:</strong>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
+                <strong style="color: #34495e">Data de Entrada na Análise:</strong>
               </td>
-              <td style="padding: 8px 0; color: #2c3e50">{{PRAZO_ANALISE}}</td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{issue.customfield_10410}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
+                <strong style="color: #34495e">Prioridade:</strong>
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{issue.priority}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; vertical-align: top">
+                <strong style="color: #34495e">Descrição:</strong>
+              </td>
+              <td style="padding: 8px 0; color: #2c3e50">
+                {{issue.description}}
+              </td>
             </tr>
           </table>
         </div>
@@ -180,45 +209,15 @@
           margin: 20px 0;
         "
       >
-        <h3 style="margin-top: 0">📊 Progresso da Análise</h3>
+        <h3 style="margin-top: 0">📝 Próximos Passos</h3>
         <p style="margin: 5px 0">
-          <strong>Progresso:</strong> {{PROGRESSO_ANALISE}}%
-        </p>
-        <p style="margin: 5px 0">
-          <strong>Próxima Revisão:</strong> {{DATA_PROXIMA_REVISAO}}
+          <strong>Próxima Etapa:</strong> Backlog Priorizado
         </p>
         <p style="margin: 5px 0">
-          <strong>Status:</strong> {{STATUS_DETALHADO}}
+          <strong>Responsável:</strong> {{issue.customfield_10413}}
         </p>
-      </div>
-      <div
-        style="
-          background-color: #f8f9fa;
-          border: 1px solid #a29bfe;
-          color: #2d3436;
-          padding: 15px;
-          border-radius: 5px;
-          margin: 20px 0;
-        "
-      >
-        <h3 style="margin-top: 0">📋 Documentos em Análise</h3>
-        <p>
-          <strong>Especificações:</strong>
-          <a href="{{LINK_ESPECIFICACOES}}" style="color: #2d3436"
-            >{{LINK_ESPECIFICACOES}}</a
-          >
-        </p>
-        <p>
-          <strong>Requisitos:</strong>
-          <a href="{{LINK_REQUISITOS}}" style="color: #2d3436"
-            >{{LINK_REQUISITOS}}</a
-          >
-        </p>
-        <p>
-          <strong>Relatório de Progresso:</strong>
-          <a href="{{LINK_RELATORIO}}" style="color: #2d3436"
-            >{{LINK_RELATORIO}}</a
-          >
+        <p style="margin-top: 15px; font-size: 14px">
+          Você será notificado quando o projeto avançar para a próxima fase.
         </p>
       </div>
       <div
@@ -231,24 +230,24 @@
           margin: 20px 0;
         "
       >
-        <h3 style="margin-top: 0">📞 Contato da Equipe</h3>
-        <p>Para dúvidas sobre a análise:</p>
+        <h3 style="margin-top: 0">📞 Contato e Suporte</h3>
+        <p>Para dúvidas sobre este projeto:</p>
         <ul style="padding-left: 20px; margin: 0">
           <li>
-            <strong>Analista Técnico:</strong>
-            <a href="mailto:{{EMAIL_ANALISTA_TECNICO}}" style="color: #0c5460"
-              >{{EMAIL_ANALISTA_TECNICO}}</a
+            <strong>Email de Suporte:</strong>
+            <a href="mailto:chamados@gruposalus.com.br" style="color: #0c5460"
+              >chamados@gruposalus.com.br</a
             >
           </li>
           <li>
-            <strong>Analista de Negócios:</strong>
-            <a href="mailto:{{EMAIL_ANALISTA_NEGOCIO}}" style="color: #0c5460"
-              >{{EMAIL_ANALISTA_NEGOCIO}}</a
+            <strong>Portal de Suporte:</strong>
+            <a href="https://suporte.gruposalus.com.br/" style="color: #0c5460"
+              >https://suporte.gruposalus.com.br/</a
             >
           </li>
           <li>
-            <strong>Portal:</strong>
-            <a href="{{LINK_PORTAL}}" style="color: #0c5460">{{LINK_PORTAL}}</a>
+            <strong>Seu Projeto no Jira:</strong>
+            <a href="{{baseUrl}}/browse/{{issue.key}}" style="color: #0c5460">{{issue.key}}</a>
           </li>
         </ul>
       </div>
@@ -268,9 +267,9 @@
         <p style="margin: 5px 0">
           Este é um email automático do sistema de gestão de projetos.
         </p>
-        <p style="margin: 5px 0">Data de envio: {{DATA_ENVIO}}</p>
+        <p style="margin: 5px 0">Data de envio: {{now}}</p>
         <p style="margin: 5px 0">
-          Projeto ID: {{ID_PROJETO}} | Protocolo: {{PROTOCOLO}}
+          Projeto: {{issue.key}} | Entrada na Análise: {{issue.customfield_10410}} | Solicitante: {{issue.customfield_10093}}
         </p>
       </div>
     </div>

@@ -40,9 +40,14 @@
       <div style="text-align: center; font-size: 42px; margin: 20px 0">
         🚀✅🎊
       </div>
-      <h2 style="color: #2c3e50">Parabéns, {{NOME_USUARIO}}!</h2>
+      <h2 style="color: #2c3e50">Parabéns, {{issue.customfield_10093}}!</h2>
       <p style="color: #34495e">
-        Seu projeto foi concluído com sucesso e está oficialmente entregue!
+        Seu projeto <strong>{{issue.summary}}</strong> foi concluído com sucesso
+        e está oficialmente entregue!
+      </p>
+      <p style="color: #34495e">
+        Abaixo você encontra um resumo completo do projeto finalizado e suas
+        informações de entrega.
       </p>
       <div style="margin: 20px 0; text-align: left">
         <span
@@ -83,7 +88,7 @@
                 style="
                   padding: 8px 0;
                   border-bottom: 1px solid #f1f3f4;
-                  width: 150px;
+                  width: 180px;
                 "
               >
                 <strong style="color: #34495e">Nome do Projeto:</strong>
@@ -95,7 +100,21 @@
                   color: #2c3e50;
                 "
               >
-                {{NOME_PROJETO}}
+                {{issue.summary}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
+                <strong style="color: #34495e">Data de Criação:</strong>
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{issue.created}}
               </td>
             </tr>
             <tr>
@@ -109,12 +128,12 @@
                   color: #2c3e50;
                 "
               >
-                {{DATA_ENTREGA}}
+                {{issue.customfield_10355}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                <strong style="color: #34495e">Duração Total:</strong>
+                <strong style="color: #34495e">Data de Conclusão:</strong>
               </td>
               <td
                 style="
@@ -123,12 +142,12 @@
                   color: #2c3e50;
                 "
               >
-                {{DURACAO_TOTAL}}
+                {{issue.resolutiondate}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                <strong style="color: #34495e">Gerente do Projeto:</strong>
+                <strong style="color: #34495e">Solicitante:</strong>
               </td>
               <td
                 style="
@@ -137,20 +156,63 @@
                   color: #2c3e50;
                 "
               >
-                {{GERENTE_PROJETO}}
+                {{issue.customfield_10093}}
               </td>
             </tr>
             <tr>
-              <td style="padding: 8px 0">
-                <strong style="color: #34495e">Avaliação Final:</strong>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
+                <strong style="color: #34495e">Responsável Final:</strong>
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{issue.customfield_10413}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
+                <strong style="color: #34495e">Prioridade:</strong>
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{issue.priority}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
+                <strong style="color: #34495e">Investimento Esperado:</strong>
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{issue.customfield_10249}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; vertical-align: top">
+                <strong style="color: #34495e">Descrição:</strong>
               </td>
               <td style="padding: 8px 0; color: #2c3e50">
-                {{AVALIACAO_FINAL}}
+                {{issue.description}}
               </td>
             </tr>
           </table>
         </div>
       </div>
+      <!-- Seção: Benefícios Alcançados -->
       <div
         style="
           background-color: #e8f5e8;
@@ -161,17 +223,71 @@
           margin: 20px 0;
         "
       >
-        <h3 style="margin-top: 0">🎯 Objetivos Alcançados</h3>
-        <p>Todos os objetivos do projeto foram atingidos com sucesso:</p>
-        <ul style="padding-left: 20px; margin: 0">
-          <li>
-            <strong>Funcionalidades:</strong> {{FUNCIONALIDADES_ENTREGUES}}
-          </li>
-          <li><strong>Qualidade:</strong> {{QUALIDADE_ENTREGA}}</li>
-          <li><strong>Prazo:</strong> {{STATUS_PRAZO}}</li>
-          <li><strong>Orçamento:</strong> {{STATUS_ORCAMENTO}}</li>
-        </ul>
+        <h3 style="margin-top: 0">🎯 Objetivos e Benefícios Alcançados</h3>
+        <div
+          style="
+            background-color: #fff;
+            border: 1px solid #e1e5e9;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+          "
+        >
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  width: 180px;
+                  vertical-align: top;
+                "
+              >
+                <strong style="color: #34495e">Objetivo do Projeto:</strong>
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{issue.customfield_10481}}
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  vertical-align: top;
+                "
+              >
+                <strong style="color: #34495e">Benefícios Esperados:</strong>
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{issue.customfield_10248}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; vertical-align: top">
+                <strong style="color: #34495e">Impacto Esperado:</strong>
+              </td>
+              <td style="padding: 8px 0; color: #2c3e50">
+                {{issue.customfield_10480}}
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
+
+      <!-- Seção: Cronograma de Entrega -->
       <div
         style="
           background-color: #fff3cd;
@@ -182,14 +298,94 @@
           margin: 20px 0;
         "
       >
-        <h3 style="margin-top: 0">📊 Estatísticas do Projeto</h3>
-        <p><strong>Sprints Realizadas:</strong> {{SPRINTS_REALIZADAS}}</p>
-        <p>
-          <strong>Features Implementadas:</strong> {{FEATURES_IMPLEMENTADAS}}
-        </p>
-        <p><strong>Bugs Corrigidos:</strong> {{BUGS_CORRIGIDOS}}</p>
-        <p><strong>Testes Realizados:</strong> {{TESTES_REALIZADOS}}</p>
+        <h3 style="margin-top: 0">📅 Cronograma de Entrega</h3>
+        <div
+          style="
+            background-color: #fff;
+            border: 1px solid #e1e5e9;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+          "
+        >
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  width: 180px;
+                "
+              >
+                <strong style="color: #34495e"
+                  >Início do Desenvolvimento:</strong
+                >
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{issue.customfield_10349}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
+                <strong style="color: #34495e">Fim do Desenvolvimento:</strong>
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{issue.customfield_10350}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
+                <strong style="color: #34495e">Período de Homologação:</strong>
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{issue.customfield_10351}} - {{issue.customfield_10352}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
+                <strong style="color: #34495e">Operação Assistida:</strong>
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{issue.customfield_10353}} - {{issue.customfield_10354}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0">
+                <strong style="color: #34495e">Entrega Final:</strong>
+              </td>
+              <td style="padding: 8px 0; color: #2c3e50">
+                {{issue.customfield_10355}}
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
+
+      <!-- Seção: Equipe e Agradecimentos -->
       <div
         style="
           background-color: #f8f9fa;
@@ -200,12 +396,87 @@
           margin: 20px 0;
         "
       >
-        <h3 style="margin-top: 0">👥 Equipe do Projeto</h3>
-        <p>Agradecemos a toda equipe que trabalhou neste projeto:</p>
-        <p><strong>Product Owner:</strong> {{PRODUCT_OWNER}}</p>
-        <p><strong>Scrum Master:</strong> {{SCRUM_MASTER}}</p>
-        <p><strong>Desenvolvedores:</strong> {{DESENVOLVEDORES}}</p>
-        <p><strong>Testadores:</strong> {{TESTADORES}}</p>
+        <h3 style="margin-top: 0">👥 Equipe e Agradecimentos</h3>
+        <div
+          style="
+            background-color: #fff;
+            border: 1px solid #e1e5e9;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+          "
+        >
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  width: 180px;
+                "
+              >
+                <strong style="color: #34495e"
+                  >Departamento Solicitante:</strong
+                >
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{issue.customfield_10245}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
+                <strong style="color: #34495e">Squads Envolvidas:</strong>
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{issue.customfield_10377}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
+                <strong style="color: #34495e">Tempo Total Registrado:</strong>
+              </td>
+              <td
+                style="
+                  padding: 8px 0;
+                  border-bottom: 1px solid #f1f3f4;
+                  color: #2c3e50;
+                "
+              >
+                {{issue.timetracking.timeSpentSeconds}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0">
+                <strong style="color: #34495e">Aprovação do Diretor:</strong>
+              </td>
+              <td style="padding: 8px 0; color: #2c3e50">
+                {{issue.customfield_10250}}
+              </td>
+            </tr>
+          </table>
+        </div>
+        <p
+          style="
+            margin-top: 15px;
+            font-size: 14px;
+            text-align: center;
+            font-style: italic;
+          "
+        >
+          Agradecemos a todos os envolvidos no sucesso deste projeto!
+        </p>
       </div>
       <div
         style="
@@ -217,29 +488,25 @@
           margin: 20px 0;
         "
       >
-        <h3 style="margin-top: 0">🔗 Recursos Finais</h3>
-        <p>Acesse os recursos do projeto entregue:</p>
+        <h3 style="margin-top: 0">📞 Contato e Suporte</h3>
+        <p>Para dúvidas sobre este projeto ou suporte pós-entrega:</p>
         <ul style="padding-left: 20px; margin: 0">
           <li>
-            <strong>Sistema em Produção:</strong>
-            <a href="{{LINK_PRODUCAO}}" style="color: #0c5460"
-              >{{LINK_PRODUCAO}}</a
+            <strong>Email de Suporte:</strong>
+            <a href="mailto:chamados@gruposalus.com.br" style="color: #0c5460"
+              >chamados@gruposalus.com.br</a
             >
           </li>
           <li>
-            <strong>Documentação Final:</strong>
-            <a href="{{LINK_DOCUMENTACAO}}" style="color: #0c5460"
-              >{{LINK_DOCUMENTACAO}}</a
+            <strong>Portal de Suporte:</strong>
+            <a href="https://suporte.gruposalus.com.br/" style="color: #0c5460"
+              >https://suporte.gruposalus.com.br/</a
             >
           </li>
           <li>
-            <strong>Manual do Usuário:</strong>
-            <a href="{{LINK_MANUAL}}" style="color: #0c5460">{{LINK_MANUAL}}</a>
-          </li>
-          <li>
-            <strong>Suporte Pós-Entrega:</strong>
-            <a href="mailto:{{EMAIL_SUPORTE}}" style="color: #0c5460"
-              >{{EMAIL_SUPORTE}}</a
+            <strong>Seu Projeto no Jira:</strong>
+            <a href="{{baseUrl}}/browse/{{issue.key}}" style="color: #0c5460"
+              >{{issue.key}}</a
             >
           </li>
         </ul>
@@ -261,10 +528,7 @@
         </p>
         <p>
           <strong>Feedback:</strong> Sua opinião é importante para nós. Entre em
-          contato:
-          <a href="mailto:{{EMAIL_FEEDBACK}}" style="color: #155724"
-            >{{EMAIL_FEEDBACK}}</a
-          >
+          contato com a equipe para compartilhar sua experiência.
         </p>
       </div>
       <p style="color: #34495e">
@@ -283,9 +547,9 @@
         <p style="margin: 5px 0">
           Este é um email automático do sistema de gestão de projetos.
         </p>
-        <p style="margin: 5px 0">Data de envio: {{DATA_ENVIO}}</p>
+        <p style="margin: 5px 0">Data de envio: {{now}}</p>
         <p style="margin: 5px 0">
-          Projeto ID: {{ID_PROJETO}} | Protocolo: {{PROTOCOLO}}
+          Projeto: {{issue.key}} | Entregue em: {{issue.customfield_10355}} | Solicitante: {{issue.customfield_10093}}
         </p>
       </div>
     </div>

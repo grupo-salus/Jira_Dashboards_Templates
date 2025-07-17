@@ -219,24 +219,26 @@
           margin: 20px 0;
         "
       >
-        <h3 style="margin-top: 0">📞 Contatos</h3>
-        <p>Para acompanhar o progresso:</p>
+        <h3 style="margin-top: 0">📞 Contato e Suporte</h3>
+        <p>Para dúvidas sobre este projeto:</p>
         <ul style="padding-left: 20px; margin: 0">
           <li>
-            <strong>Product Owner:</strong>
-            <a href="mailto:{{EMAIL_PRODUCT_OWNER}}" style="color: #0c5460"
-              >{{EMAIL_PRODUCT_OWNER}}</a
+            <strong>Email de Suporte:</strong>
+            <a href="mailto:chamados@gruposalus.com.br" style="color: #0c5460"
+              >chamados@gruposalus.com.br</a
             >
           </li>
           <li>
-            <strong>Scrum Master:</strong>
-            <a href="mailto:{{EMAIL_SCRUM_MASTER}}" style="color: #0c5460"
-              >{{EMAIL_SCRUM_MASTER}}</a
+            <strong>Portal de Suporte:</strong>
+            <a href="https://suporte.gruposalus.com.br/" style="color: #0c5460"
+              >https://suporte.gruposalus.com.br/</a
             >
           </li>
           <li>
-            <strong>Portal do Projeto:</strong>
-            <a href="{{LINK_PORTAL}}" style="color: #0c5460">{{LINK_PORTAL}}</a>
+            <strong>Seu Projeto no Jira:</strong>
+            <a href="{{baseUrl}}/browse/{{issue.key}}" style="color: #0c5460"
+              >{{issue.key}}</a
+            >
           </li>
         </ul>
       </div>
@@ -256,9 +258,9 @@
         <p style="margin: 5px 0">
           Este é um email automático do sistema de gestão de projetos.
         </p>
-        <p style="margin: 5px 0">Data de envio: {{DATA_ENVIO}}</p>
+        <p style="margin: 5px 0">Data de envio: {{now}}</p>
         <p style="margin: 5px 0">
-          Projeto ID: {{ID_PROJETO}} | Protocolo: {{PROTOCOLO}}
+          Projeto: {{issue.key}} | Criado em: {{issue.created}} | Solicitante: {{issue.customfield_10093}}
         </p>
       </div>
     </div>
