@@ -152,58 +152,7 @@
           </table>
         </div>
       </div>
-      <div
-        style="
-          background-color: #fff3cd;
-          border: 1px solid #ffeaa7;
-          color: #856404;
-          padding: 15px;
-          border-radius: 5px;
-          margin: 20px 0;
-        "
-      >
-        <h3 style="margin-top: 0">🧪 Processo de Homologação</h3>
-        <p>Os testes estão sendo realizados nas seguintes áreas:</p>
-        <ul style="padding-left: 20px; margin: 0">
-          <li>Testes funcionais</li>
-          <li>Testes de integração</li>
-          <li>Testes de performance</li>
-          <li>Testes de segurança</li>
-          <li>Testes de usabilidade</li>
-        </ul>
-      </div>
-      <div
-        style="
-          background-color: #e8f5e8;
-          border: 1px solid #4caf50;
-          color: #2e7d32;
-          padding: 15px;
-          border-radius: 5px;
-          margin: 20px 0;
-        "
-      >
-        <h3 style="margin-top: 0">✅ Progresso dos Testes</h3>
-        <p><strong>Testes Concluídos:</strong> {{TESTES_CONCLUIDOS}}</p>
-        <p><strong>Testes em Andamento:</strong> {{TESTES_ANDAMENTO}}</p>
-        <p><strong>Testes Pendentes:</strong> {{TESTES_PENDENTES}}</p>
-        <p><strong>Taxa de Sucesso:</strong> {{TAXA_SUCESSO}}%</p>
-      </div>
-      <div
-        style="
-          background-color: #f8f9fa;
-          border: 1px solid #a29bfe;
-          color: #2d3436;
-          padding: 15px;
-          border-radius: 5px;
-          margin: 20px 0;
-        "
-      >
-        <h3 style="margin-top: 0">🐛 Relatório de Bugs</h3>
-        <p><strong>Bugs Críticos:</strong> {{BUGS_CRITICOS}}</p>
-        <p><strong>Bugs Altos:</strong> {{BUGS_ALTOS}}</p>
-        <p><strong>Bugs Médios:</strong> {{BUGS_MEDIOS}}</p>
-        <p><strong>Bugs Baixos:</strong> {{BUGS_BAIXOS}}</p>
-      </div>
+
       <div
         style="
           background-color: #d1ecf1;
@@ -219,26 +168,8 @@
         <ul style="padding-left: 20px; margin: 0">
           <li>
             <strong>Ambiente de Homologação:</strong>
-            <a href="{{LINK_AMBIENTE_HOMOLOG}}" style="color: #0c5460"
-              >{{LINK_AMBIENTE_HOMOLOG}}</a
-            >
-          </li>
-          <li>
-            <strong>Relatório de Testes:</strong>
-            <a href="{{LINK_RELATORIO_TESTES}}" style="color: #0c5460"
-              >{{LINK_RELATORIO_TESTES}}</a
-            >
-          </li>
-          <li>
-            <strong>Bug Tracker:</strong>
-            <a href="{{LINK_BUG_TRACKER}}" style="color: #0c5460"
-              >{{LINK_BUG_TRACKER}}</a
-            >
-          </li>
-          <li>
-            <strong>Documentação:</strong>
-            <a href="{{LINK_DOCUMENTACAO}}" style="color: #0c5460"
-              >{{LINK_DOCUMENTACAO}}</a
+            <a href="{{baseUrl}}/browse/{{issue.key}}" style="color: #0c5460"
+              >Acessar projeto: {{issue.key}}</a
             >
           </li>
         </ul>
