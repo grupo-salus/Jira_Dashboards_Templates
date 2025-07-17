@@ -40,7 +40,7 @@
       <div style="text-align: center; font-size: 42px; margin: 20px 0">
         ⛔🚫📋
       </div>
-      <h2 style="color: #2c3e50">Olá, {{NOME_USUARIO}}</h2>
+      <h2 style="color: #2c3e50">Olá, {{issue.customfield_10093}}</h2>
       <p style="color: #34495e">
         Informamos que seu projeto foi cancelado conforme as diretrizes da
         empresa.
@@ -96,12 +96,12 @@
                   color: #2c3e50;
                 "
               >
-                {{NOME_PROJETO}}
+                {{issue.summary}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                <strong style="color: #34495e">Data de Cancelamento:</strong>
+                <strong style="color: #34495e">Data de Início do Cancelamento:</strong>
               </td>
               <td
                 style="
@@ -110,12 +110,12 @@
                   color: #2c3e50;
                 "
               >
-                {{DATA_CANCELAMENTO}}
+                {{issue.customfield_10357}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                <strong style="color: #34495e">Responsável:</strong>
+                <strong style="color: #34495e">Responsável Atual:</strong>
               </td>
               <td
                 style="
@@ -124,12 +124,12 @@
                   color: #2c3e50;
                 "
               >
-                {{RESPONSAVEL_CANCELAMENTO}}
+                {{issue.customfield_10413.value}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                <strong style="color: #34495e">Fase do Cancelamento:</strong>
+                <strong style="color: #34495e">Status Atual:</strong>
               </td>
               <td
                 style="
@@ -138,16 +138,14 @@
                   color: #2c3e50;
                 "
               >
-                {{FASE_CANCELAMENTO}}
+                {{issue.status.name}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0">
                 <strong style="color: #34495e">Protocolo:</strong>
               </td>
-              <td style="padding: 8px 0; color: #2c3e50">
-                {{PROTOCOLO_CANCELAMENTO}}
-              </td>
+              <td style="padding: 8px 0; color: #2c3e50">{{issue.key}}</td>
             </tr>
           </table>
         </div>
@@ -163,80 +161,11 @@
         "
       >
         <h3 style="margin-top: 0">🚫 Motivo do Cancelamento</h3>
-        <p><strong>Categoria:</strong> {{CATEGORIA_CANCELAMENTO}}</p>
-        <p><strong>Motivo:</strong> {{MOTIVO_CANCELAMENTO}}</p>
-        <p><strong>Decisão tomada por:</strong> {{DECISAO_TOMADA_POR}}</p>
-      </div>
-      <div
-        style="
-          background-color: #fff3cd;
-          border: 1px solid #ffeaa7;
-          color: #856404;
-          padding: 15px;
-          border-radius: 5px;
-          margin: 20px 0;
-        "
-      >
-        <h3 style="margin-top: 0">📊 Progresso até o Cancelamento</h3>
-        <p><strong>Progresso Alcançado:</strong> {{PROGRESSO_ALCANCADO}}%</p>
-        <p>
-          <strong>Investimento Realizado:</strong> {{INVESTIMENTO_REALIZADO}}
-        </p>
-        <p><strong>Tempo Investido:</strong> {{TEMPO_INVESTIDO}}</p>
-        <p><strong>Entregas Realizadas:</strong> {{ENTREGAS_REALIZADAS}}</p>
+        <p><strong>Motivo:</strong> {{issue.customfield_10412.value}}</p>
+        <p><strong>Responsável:</strong> {{issue.customfield_10413.value}}</p>
+        <p><strong>Status:</strong> {{issue.status.name}}</p>
       </div>
 
-      <div
-        style="
-          background-color: #d1ecf1;
-          border: 1px solid #b8daff;
-          color: #0c5460;
-          padding: 15px;
-          border-radius: 5px;
-          margin: 20px 0;
-        "
-      >
-        <h3 style="margin-top: 0">📞 Contato e Suporte</h3>
-        <p>Para questões sobre o cancelamento:</p>
-        <ul style="padding-left: 20px; margin: 0">
-          <li>
-            <strong>Responsável:</strong>
-            <a href="mailto:{{EMAIL_RESPONSAVEL}}" style="color: #0c5460"
-              >{{EMAIL_RESPONSAVEL}}</a
-            >
-          </li>
-          <li>
-            <strong>Gerência:</strong>
-            <a href="mailto:{{EMAIL_GERENCIA}}" style="color: #0c5460"
-              >{{EMAIL_GERENCIA}}</a
-            >
-          </li>
-          <li>
-            <strong>Relatório Final:</strong>
-            <a href="{{LINK_RELATORIO_FINAL}}" style="color: #0c5460"
-              >{{LINK_RELATORIO_FINAL}}</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div
-        style="
-          background-color: #e8f4f8;
-          border: 1px solid #bee5eb;
-          color: #0c5460;
-          padding: 15px;
-          border-radius: 5px;
-          margin: 20px 0;
-        "
-      >
-        <h3 style="margin-top: 0">💡 Oportunidades Futuras</h3>
-        <p>Este cancelamento não impede futuras colaborações:</p>
-        <ul style="padding-left: 20px; margin: 0">
-          <li>Você pode submeter novos projetos</li>
-          <li>Experiência adquirida será considerada</li>
-          <li>Lessons learned serão documentadas</li>
-        </ul>
-      </div>
       <div
         style="
           background-color: #d1ecf1;

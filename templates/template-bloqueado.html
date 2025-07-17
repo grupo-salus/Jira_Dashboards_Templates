@@ -40,7 +40,7 @@
       <div style="text-align: center; font-size: 42px; margin: 20px 0">
         ⚠️🚧⏸️
       </div>
-      <h2 style="color: #2c3e50">Olá, {{NOME_USUARIO}}</h2>
+      <h2 style="color: #2c3e50">Olá, {{issue.customfield_10093}}</h2>
       <p style="color: #34495e">
         Informamos que seu projeto encontra-se temporariamente bloqueado devido
         a impedimentos técnicos ou organizacionais.
@@ -96,12 +96,12 @@
                   color: #2c3e50;
                 "
               >
-                {{NOME_PROJETO}}
+                {{issue.summary}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                <strong style="color: #34495e">Data do Bloqueio:</strong>
+                <strong style="color: #34495e">Data de Início do Bloqueio:</strong>
               </td>
               <td
                 style="
@@ -110,12 +110,12 @@
                   color: #2c3e50;
                 "
               >
-                {{DATA_BLOQUEIO}}
+                {{issue.customfield_10359}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                <strong style="color: #34495e">Responsável:</strong>
+                <strong style="color: #34495e">Responsável Atual:</strong>
               </td>
               <td
                 style="
@@ -124,12 +124,12 @@
                   color: #2c3e50;
                 "
               >
-                {{RESPONSAVEL_BLOQUEIO}}
+                {{issue.customfield_10413.value}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                <strong style="color: #34495e">Fase Bloqueada:</strong>
+                <strong style="color: #34495e">Status Atual:</strong>
               </td>
               <td
                 style="
@@ -138,16 +138,14 @@
                   color: #2c3e50;
                 "
               >
-                {{FASE_BLOQUEADA}}
+                {{issue.status.name}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0">
-                <strong style="color: #34495e">Ticket de Bloqueio:</strong>
+                <strong style="color: #34495e">Protocolo:</strong>
               </td>
-              <td style="padding: 8px 0; color: #2c3e50">
-                {{TICKET_BLOQUEIO}}
-              </td>
+              <td style="padding: 8px 0; color: #2c3e50">{{issue.key}}</td>
             </tr>
           </table>
         </div>
@@ -163,68 +161,11 @@
         "
       >
         <h3 style="margin-top: 0">🚧 Detalhes do Bloqueio</h3>
-        <p><strong>Tipo de Bloqueio:</strong> {{TIPO_BLOQUEIO}}</p>
-        <p><strong>Descrição:</strong> {{DESCRICAO_BLOQUEIO}}</p>
-        <p><strong>Impacto:</strong> {{IMPACTO_BLOQUEIO}}</p>
-        <p>
-          <strong>Prioridade de Resolução:</strong> {{PRIORIDADE_RESOLUCAO}}
-        </p>
+        <p><strong>Motivo:</strong> {{issue.customfield_10344.value}}</p>
+        <p><strong>Responsável:</strong> {{issue.customfield_10413.value}}</p>
+        <p><strong>Status:</strong> {{issue.status.name}}</p>
       </div>
-      <div
-        style="
-          background-color: #fff3cd;
-          border: 1px solid #ffeaa7;
-          color: #856404;
-          padding: 15px;
-          border-radius: 5px;
-          margin: 20px 0;
-        "
-      >
-        <h3 style="margin-top: 0">🔧 Plano de Resolução</h3>
-        <p><strong>Ação Necessária:</strong> {{ACAO_NECESSARIA}}</p>
-        <p>
-          <strong>Responsável pela Resolução:</strong> {{RESPONSAVEL_RESOLUCAO}}
-        </p>
-        <p><strong>Prazo Estimado:</strong> {{PRAZO_RESOLUCAO}}</p>
-        <p><strong>Status da Resolução:</strong> {{STATUS_RESOLUCAO}}</p>
-      </div>
-      <div
-        style="
-          background-color: #f8f9fa;
-          border: 1px solid #a29bfe;
-          color: #2d3436;
-          padding: 15px;
-          border-radius: 5px;
-          margin: 20px 0;
-        "
-      >
-        <h3 style="margin-top: 0">📊 Impacto no Cronograma</h3>
-        <p><strong>Atraso Estimado:</strong> {{ATRASO_ESTIMADO}}</p>
-        <p><strong>Tarefas Afetadas:</strong> {{TAREFAS_AFETADAS}}</p>
-        <p><strong>Recursos Impactados:</strong> {{RECURSOS_IMPACTADOS}}</p>
-        <p><strong>Custos Adicionais:</strong> {{CUSTOS_ADICIONAIS}}</p>
-      </div>
-      <div
-        style="
-          background-color: #e8f5e8;
-          border: 1px solid #4caf50;
-          color: #2e7d32;
-          padding: 15px;
-          border-radius: 5px;
-          margin: 20px 0;
-        "
-      >
-        <h3 style="margin-top: 0">✅ Ações em Andamento</h3>
-        <p>
-          Nossa equipe está trabalhando ativamente para resolver o bloqueio:
-        </p>
-        <ul style="padding-left: 20px; margin: 0">
-          <li>Análise detalhada do impedimento</li>
-          <li>Definição de plano de ação</li>
-          <li>Coordenação com áreas envolvidas</li>
-          <li>Monitoramento contínuo do progresso</li>
-        </ul>
-      </div>
+
       <div
         style="
           background-color: #d1ecf1;
@@ -235,17 +176,11 @@
           margin: 20px 0;
         "
       >
-        <h3 style="margin-top: 0">📞 Contatos</h3>
-        <p>Para acompanhar a resolução do bloqueio:</p>
+        <h3 style="margin-top: 0">📞 Contato e Suporte</h3>
+        <p>Para dúvidas sobre este projeto:</p>
         <ul style="padding-left: 20px; margin: 0">
           <li>
-            <strong>Responsável:</strong>
-            <a href="mailto:{{EMAIL_RESPONSAVEL}}" style="color: #0c5460"
-              >{{EMAIL_RESPONSAVEL}}</a
-            >
-          </li>
-          <li>
-            <strong>Gerente do Projeto:</strong>
+            <strong>Email de Suporte:</strong>
             <a href="mailto:chamados@gruposalus.com.br" style="color: #0c5460"
               >chamados@gruposalus.com.br</a
             >
@@ -283,7 +218,8 @@
         </p>
         <p style="margin: 5px 0">Data de envio: {{now}}</p>
         <p style="margin: 5px 0">
-          Projeto: {{issue.key}} | Criado em: {{issue.created}} | Solicitante: {{issue.customfield_10093}}
+          Projeto: {{issue.key}} | Criado em: {{issue.created}} | Solicitante:
+          {{issue.customfield_10093}}
         </p>
       </div>
     </div>
