@@ -125,7 +125,7 @@
                     color: #2c3e50;
                   "
                 >
-                  {{issue.customfield_10359}}
+                  {{issue.customfield_10359.format("dd/MM/yyyy")}}
                 </td>
               </tr>
               <tr>
@@ -258,8 +258,8 @@
               >
                 Este é um email automático do sistema de gestão de projetos<br />Data
                 de envio: {{now.format("dd/MM/yyyy")}}<br />Projeto:
-                {{issue.key}} | Bloqueado em: {{issue.customfield_10359}} |
-                Solicitante: {{issue.customfield_10093}}
+                                 {{issue.key}} | Bloqueado em: {{issue.customfield_10359.format("dd/MM/yyyy")}} |
+                 Solicitante: {{issue.customfield_10093}}
               </td>
             </tr>
           </table>

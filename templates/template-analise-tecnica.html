@@ -167,7 +167,7 @@
                     color: #2c3e50;
                   "
                 >
-                  {{issue.customfield_10410}}
+                  {{issue.customfield_10410.format("dd/MM/yyyy")}}
                 </td>
               </tr>
               <tr>
@@ -292,8 +292,8 @@
               >
                 Este é um email automático do sistema de gestão de projetos<br />Data
                 de envio: {{now.format("dd/MM/yyyy")}}<br />Projeto:
-                {{issue.key}} | Entrada na Análise: {{issue.customfield_10410}}
-                | Solicitante: {{issue.customfield_10093}}
+                {{issue.key}} |                  Entrada na Análise: {{issue.customfield_10410.format("dd/MM/yyyy")}}
+                 | Solicitante: {{issue.customfield_10093}}
               </td>
             </tr>
           </table>
