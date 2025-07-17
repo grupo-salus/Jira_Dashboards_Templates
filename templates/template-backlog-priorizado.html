@@ -40,7 +40,7 @@
       <div style="text-align: center; font-size: 42px; margin: 20px 0">
         📊⏳🎯
       </div>
-      <h2 style="color: #2c3e50">Olá, {{NOME_USUARIO}}!</h2>
+      <h2 style="color: #2c3e50">Olá, {{issue.customfield_10093}}!</h2>
       <p style="color: #34495e">
         Excelente! Seu projeto foi aprovado e está no backlog priorizado,
         aguardando início do desenvolvimento.
@@ -96,7 +96,7 @@
                   color: #2c3e50;
                 "
               >
-                {{NOME_PROJETO}}
+                {{issue.summary}}
               </td>
             </tr>
             <tr>
@@ -110,12 +110,12 @@
                   color: #2c3e50;
                 "
               >
-                {{PRIORIDADE}}
+                {{issue.priority.name}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                <strong style="color: #34495e">Posição no Backlog:</strong>
+                <strong style="color: #34495e">Status Atual:</strong>
               </td>
               <td
                 style="
@@ -124,12 +124,14 @@
                   color: #2c3e50;
                 "
               >
-                {{POSICAO_BACKLOG}}
+                {{issue.status.name}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                <strong style="color: #34495e">Estimativa de Início:</strong>
+                <strong style="color: #34495e"
+                  >Data de Entrada no Backlog:</strong
+                >
               </td>
               <td
                 style="
@@ -138,42 +140,21 @@
                   color: #2c3e50;
                 "
               >
-                {{ESTIMATIVA_INICIO}}
+                {{issue.customfield_10347}}
               </td>
             </tr>
             <tr>
               <td style="padding: 8px 0">
-                <strong style="color: #34495e">Duração Estimada:</strong>
+                <strong style="color: #34495e">Responsável Atual:</strong>
               </td>
               <td style="padding: 8px 0; color: #2c3e50">
-                {{DURACAO_ESTIMADA}}
+                {{issue.customfield_10413.value}}
               </td>
             </tr>
           </table>
         </div>
       </div>
-      <div
-        style="
-          background-color: #e8f5e8;
-          border: 1px solid #4caf50;
-          color: #2e7d32;
-          padding: 15px;
-          border-radius: 5px;
-          margin: 20px 0;
-        "
-      >
-        <h3 style="margin-top: 0">✅ Aprovação Concluída</h3>
-        <p>
-          Seu projeto passou por todas as análises e foi aprovado! Resumo da
-          aprovação:
-        </p>
-        <ul style="padding-left: 20px; margin: 0">
-          <li><strong>Viabilidade Técnica:</strong> Aprovada</li>
-          <li><strong>Análise de Negócios:</strong> Aprovada</li>
-          <li><strong>Orçamento:</strong> Aprovado</li>
-          <li><strong>Recursos:</strong> Alocados</li>
-        </ul>
-      </div>
+
       <div
         style="
           background-color: #fff3cd;
@@ -184,30 +165,11 @@
           margin: 20px 0;
         "
       >
-        <h3 style="margin-top: 0">⏳ Fila de Desenvolvimento</h3>
+        <h3 style="margin-top: 0">📅 Cronograma do Projeto</h3>
         <p>
-          <strong>Posição Atual:</strong> {{POSICAO_ATUAL}} de
-          {{TOTAL_PROJETOS}} projetos
+          <strong>Data Prevista para Desenvolvimento:</strong>
+          {{issue.customfield_10349}}
         </p>
-        <p><strong>Projetos à Frente:</strong> {{PROJETOS_A_FRENTE}}</p>
-        <p><strong>Previsão de Início:</strong> {{PREVISAO_INICIO}}</p>
-        <p>Acompanhe o progresso da fila em tempo real no portal.</p>
-      </div>
-      <div
-        style="
-          background-color: #f8f9fa;
-          border: 1px solid #a29bfe;
-          color: #2d3436;
-          padding: 15px;
-          border-radius: 5px;
-          margin: 20px 0;
-        "
-      >
-        <h3 style="margin-top: 0">👥 Equipe Designada</h3>
-        <p><strong>Product Owner:</strong> {{PRODUCT_OWNER}}</p>
-        <p><strong>Scrum Master:</strong> {{SCRUM_MASTER}}</p>
-        <p><strong>Tech Lead:</strong> {{TECH_LEAD}}</p>
-        <p><strong>Equipe de Desenvolvimento:</strong> {{EQUIPE_DEV}}</p>
       </div>
       <div
         style="
@@ -260,7 +222,8 @@
         </p>
         <p style="margin: 5px 0">Data de envio: {{now}}</p>
         <p style="margin: 5px 0">
-          Projeto: {{issue.key}} | Criado em: {{issue.created}} | Solicitante: {{issue.customfield_10093}}
+          Projeto: {{issue.key}} | Criado em: {{issue.created}} | Solicitante:
+          {{issue.customfield_10093}}
         </p>
       </div>
     </div>
