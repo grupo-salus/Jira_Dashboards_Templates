@@ -7,54 +7,52 @@ Este documento contém os assuntos sugeridos para cada template de email do proj
 ### 🚀 Projeto Criado
 
 **Template:** `template-projeto-criado.html`
-**Assunto:** `[JIRA] Novo projeto criado: {{issue.summary}}`
-
-### 📊 Backlog Priorizado
-
-**Template:** `template-backlog-priorizado.html`
-**Assunto:** `[JIRA] Backlog priorizado - Sprint {{issue.customfield_10345}}`
-
-## 🔄 Templates de Status de Tarefa
+**Assunto:** `[JIRA] Seu projeto foi criado: {{issue.summary}}`
 
 ### 💡 Ideação
 
 **Template:** `template-ideacao.html`
-**Assunto:** `[JIRA] Tarefa em ideação: {{issue.summary}}`
+**Assunto:** `[JIRA] Seu projeto entrou no status de ideação: {{issue.summary}}`
 
 ### 🔍 Análise Técnica
 
 **Template:** `template-analise-tecnica.html`
-**Assunto:** `[JIRA] Análise técnica iniciada: {{issue.summary}}`
+**Assunto:** `[JIRA] Seu projeto entrou no status de análise técnica: {{issue.summary}}`
 
-### 🛠️ Desenvolvimento
+### 📊 Backlog Priorizado
+
+**Template:** `template-backlog-priorizado.html`
+**Assunto:** `[JIRA] Seu projeto entrou no status de backlog priorizado: {{issue.summary}}`
+
+### 🛠️ Em Desenvolvimento
 
 **Template:** `template-desenvolvimento.html`
-**Assunto:** `[JIRA] Desenvolvimento em andamento: {{issue.summary}}`
+**Assunto:** `[JIRA] Seu projeto entrou no status de desenvolvimento: {{issue.summary}}`
 
-### 🧪 Homologação
+### 🧪 Em Homologação
 
 **Template:** `template-homologacao.html`
-**Assunto:** `[JIRA] Tarefa em homologação: {{issue.summary}}`
-
-### ✅ Entregue
-
-**Template:** `template-entregue.html`
-**Assunto:** `[JIRA] Tarefa entregue: {{issue.summary}}`
-
-### 🚫 Bloqueado
-
-**Template:** `template-bloqueado.html`
-**Assunto:** `[JIRA] Tarefa bloqueada: {{issue.summary}}`
-
-### ❌ Cancelado
-
-**Template:** `template-cancelado.html`
-**Assunto:** `[JIRA] Tarefa cancelada: {{issue.summary}}`
+**Assunto:** `[JIRA] Seu projeto entrou no status de homologação: {{issue.summary}}`
 
 ### 🔧 Operação Assistida
 
 **Template:** `template-operacao-assistida.html`
-**Assunto:** `[JIRA] Operação assistida: {{issue.summary}}`
+**Assunto:** `[JIRA] Seu projeto entrou no status de operação assistida: {{issue.summary}}`
+
+### ✅ Entregue
+
+**Template:** `template-entregue.html`
+**Assunto:** `[JIRA] Seu projeto foi entregue com sucesso: {{issue.summary}}`
+
+### ❌ Cancelado
+
+**Template:** `template-cancelado.html`
+**Assunto:** `[JIRA] Seu projeto foi cancelado: {{issue.summary}}`
+
+### 🚫 Bloqueado
+
+**Template:** `template-bloqueado.html`
+**Assunto:** `[JIRA] Seu projeto foi bloqueado: {{issue.summary}}`
 
 ## 📝 Notas de Uso
 
