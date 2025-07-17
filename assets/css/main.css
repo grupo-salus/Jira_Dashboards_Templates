@@ -223,34 +223,35 @@ body {
 
 /* Cores específicas para cada status */
 .projeto-criado .status-badge {
-  background-color: #6c5ce7;
+  background-color: #002a3a;
 }
 .ideacao .status-badge {
-  background-color: #e74c3c;
+  background-color: #6c757d;
 }
 .analise .status-badge {
-  background-color: #8e44ad;
+  background-color: #ffc107;
+  color: #212529;
 }
 .backlog .status-badge {
-  background-color: #e67e22;
+  background-color: #28a745;
 }
 .desenvolvimento .status-badge {
-  background-color: #2980b9;
+  background-color: #007bff;
 }
 .homologacao .status-badge {
-  background-color: #d35400;
+  background-color: #17a2b8;
 }
 .operacao .status-badge {
-  background-color: #229954;
+  background-color: #6f42c1;
 }
 .entregue .status-badge {
-  background-color: #27ae60;
+  background-color: #28a745;
 }
 .cancelado .status-badge {
-  background-color: #c0392b;
+  background-color: #002a3a;
 }
 .bloqueado .status-badge {
-  background-color: #e67e22;
+  background-color: #dc3545;
 }
 
 .keyboard-shortcuts {
