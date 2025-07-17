@@ -24,6 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
   window.toggleMobileMenu = () => {
     templateViewer.toggleMobileMenu();
   };
+
+  window.toggleSidebar = () => {
+    templateViewer.toggleSidebar();
+  };
 });
 
 // Exportar para uso em outros módulos se necessário

@@ -128,11 +128,19 @@
         <p>← → : Navegar entre templates</p>
         <p>1-9, 0 : Ir para template específico</p>
         <p>ESC : Fechar menu (mobile)</p>
+        <p>☰ : Ocultar/mostrar menu (desktop)</p>
       </div>
     </div>
 
     <div class="main-content">
       <div class="header">
+        <button
+          class="sidebar-toggle-btn"
+          onclick="toggleSidebar()"
+          title="Ocultar/Mostrar Menu"
+        >
+          ☰
+        </button>
         <h2 id="currentTitle">Template: Projeto Criado</h2>
         <div class="navigation-controls">
           <button class="nav-btn" id="prevBtn" onclick="previousTemplate()">

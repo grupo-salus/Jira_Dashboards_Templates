@@ -37,6 +37,13 @@ class TemplateViewer {
         this.toggleMobileMenu();
       });
 
+    // Botão de toggle da sidebar (desktop)
+    document
+      .querySelector(".sidebar-toggle-btn")
+      ?.addEventListener("click", () => {
+        this.toggleSidebar();
+      });
+
     // Botões dos templates na sidebar
     document.querySelectorAll(".template-btn").forEach((btn) => {
       btn.addEventListener("click", (e) => {
@@ -131,6 +138,16 @@ class TemplateViewer {
     const sidebar = document.getElementById("sidebar");
     if (sidebar) {
       sidebar.classList.toggle("mobile-open");
+    }
+  }
+
+  toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const mainContent = document.querySelector(".main-content");
+    
+    if (sidebar && mainContent) {
+      sidebar.classList.toggle("hidden");
+      mainContent.classList.toggle("sidebar-hidden");
     }
   }
 
