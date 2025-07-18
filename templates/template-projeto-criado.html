@@ -548,43 +548,6 @@
             <li>Avaliação de riscos iniciais</li>
           </ul>
         </div>
-        <div
-          style="
-            background-color: #d1ecf1;
-            border: 1px solid #b8daff;
-            color: #0c5460;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-          "
-        >
-          <h3 style="margin-top: 0">📞 Contato e Suporte</h3>
-          <p>Para dúvidas sobre este projeto:</p>
-          <ul style="padding-left: 20px; margin: 0">
-            <li>
-              <strong>Email de Suporte:</strong
-              ><a
-                href="mailto:chamados@gruposalus.com.br"
-                style="color: #0c5460"
-                >chamados@gruposalus.com.br</a
-              >
-            </li>
-            <li>
-              <strong>Portal de Suporte:</strong
-              ><a
-                href="https://suporte.gruposalus.com.br/"
-                style="color: #0c5460"
-                >https://suporte.gruposalus.com.br/</a
-              >
-            </li>
-            <li>
-              <strong>Seu Projeto no Jira:</strong
-              ><a href="{{baseUrl}}/browse/{{issue.key}}" style="color: #0c5460"
-                >{{issue.key}}</a
-              >
-            </li>
-          </ul>
-        </div>
         <p style="color: #34495e">
           Continuaremos mantendo você informado sobre o progresso do projeto.
         </p>
@@ -628,6 +591,32 @@
                 {{issue.key}} | Criado em:
                 {{issue.created.format("dd/MM/yyyy")}} | Solicitante:
                 {{issue.customfield_10093}}
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="
+                  font-size: 11px;
+                  line-height: 1.4;
+                  padding: 15px 0 5px 0;
+                  opacity: 0.7;
+                  border-top: 1px solid rgba(255, 255, 255, 0.2);
+                  margin-top: 10px;
+                "
+              >
+                <strong>Suporte:</strong>
+                Clique para acessar o
+                <a
+                  href="https://suporte.gruposalus.com.br/"
+                  style="color: #ffffff; text-decoration: underline"
+                  >portal de chamados</a
+                >
+                ou envie um email para
+                <a
+                  href="mailto:chamados@gruposalus.com.br"
+                  style="color: #ffffff; text-decoration: none"
+                  >chamados@gruposalus.com.br</a
+                >
               </td>
             </tr>
           </table>
