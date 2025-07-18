@@ -457,22 +457,7 @@
                   {{issue.customfield_10377}}
                 </td>
               </tr>
-              <tr>
-                <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                  <strong style="color: #34495e"
-                    >Tempo Total Registrado:</strong
-                  >
-                </td>
-                <td
-                  style="
-                    padding: 8px 0;
-                    border-bottom: 1px solid #f1f3f4;
-                    color: #2c3e50;
-                  "
-                >
-                  {{issue.timetracking.timeSpentSeconds}}
-                </td>
-              </tr>
+
               <tr>
                 <td style="padding: 8px 0">
                   <strong style="color: #34495e">Aprovação do Diretor:</strong>
@@ -630,7 +615,8 @@
                 "
               >
                 Este é um email automático do sistema de gestão de projetos<br />Data
-                                 de envio: {{now.format("dd/MM/yyyy")}}<br />Projeto: {{issue.key}} | Entregue em:
+                de envio: {{now.format("dd/MM/yyyy")}}<br />Projeto:
+                {{issue.key}} | Entregue em:
                 {{issue.customfield_10355.format("dd/MM/yyyy")}} | Solicitante:
                 {{issue.customfield_10093}}
               </td>
