@@ -48,15 +48,14 @@
           "
         >
           <h1 style="margin: 0; padding: 0; font-size: 18px">
-            💡 Projeto em Ideação
+            💡 Projeto em IDEAÇÃO
           </h1>
         </div>
       </div>
       <div style="padding: 20px">
         <h2 style="color: #2c3e50">Olá, {{issue.customfield_10093}}!</h2>
         <p style="color: #495057">
-          Seu projeto <strong>{{issue.summary}}</strong> entrou na fase de
-          ideação e está sendo analisado pela nossa equipe.
+          Seu projeto <strong>{{issue.summary}}</strong> está em ideação.
         </p>
         <div style="margin: 20px 0; text-align: left">
           <span
@@ -207,8 +206,8 @@
         >
           <h3 style="margin-top: 0">🎯 Fase de Ideação</h3>
           <p>
-            Nesta fase, estamos trabalhando na definição do escopo e requisitos
-            do projeto. Atividades em andamento:
+            Seu projeto está na fase de ideação e sera levantado as definições
+            do escopo e requisitos:
           </p>
           <ul style="padding-left: 20px; margin: 0">
             <li>Análise de requisitos funcionais</li>
@@ -293,8 +292,9 @@
                 "
               >
                 Este é um email automático do sistema de gestão de projetos<br />Data
-                                 de envio: {{now.format("dd/MM/yyyy")}}<br />Projeto: {{issue.key}} | Entrada na
-                                 Ideação: {{issue.customfield_10345.format("dd/MM/yyyy")}} | Solicitante:
+                de envio: {{now.format("dd/MM/yyyy")}}<br />Projeto:
+                {{issue.key}} | Entrada na Ideação:
+                {{issue.customfield_10345.format("dd/MM/yyyy")}} | Solicitante:
                 {{issue.customfield_10093}}
               </td>
             </tr>

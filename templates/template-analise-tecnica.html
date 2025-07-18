@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projeto em Análise Técnica</title>
+    <title>Projeto em Análise Técnica e Negócios</title>
   </head>
   <body
     style="
@@ -48,7 +48,7 @@
           "
         >
           <h1 style="margin: 0; padding: 0; font-size: 18px">
-            🔍 Análise Técnica em Andamento
+            🔍 Análise Técnica e Negócios
           </h1>
         </div>
       </div>
@@ -56,7 +56,7 @@
         <h2 style="color: #2c3e50">Olá, {{issue.customfield_10093}}!</h2>
         <p style="color: #495057">
           Seu projeto <strong>{{issue.summary}}</strong> está em análise técnica
-          detalhada pela nossa equipe especializada.
+          e negócios.
         </p>
         <div style="margin: 20px 0; text-align: left">
           <span
@@ -69,7 +69,7 @@
               font-weight: 600;
               display: inline-block;
             "
-            >ANÁLISE TÉCNICA</span
+            >ANÁLISE TÉCNICA E NEGÓCIOS</span
           >
         </div>
         <div
@@ -206,7 +206,7 @@
           "
         >
           <h3 style="margin-top: 0">🔬 Análise em Andamento</h3>
-          <p>Nossa equipe está avaliando os seguintes aspectos:</p>
+          <p>Sera avaliados os seguintes aspectos:</p>
           <ul style="padding-left: 20px; margin: 0">
             <li>Viabilidade técnica da solução</li>
             <li>Análise de impacto nos negócios</li>
@@ -292,8 +292,9 @@
               >
                 Este é um email automático do sistema de gestão de projetos<br />Data
                 de envio: {{now.format("dd/MM/yyyy")}}<br />Projeto:
-                {{issue.key}} |                  Entrada na Análise: {{issue.customfield_10410.format("dd/MM/yyyy")}}
-                 | Solicitante: {{issue.customfield_10093}}
+                {{issue.key}} | Entrada na Análise:
+                {{issue.customfield_10410.format("dd/MM/yyyy")}} | Solicitante:
+                {{issue.customfield_10093}}
               </td>
             </tr>
           </table>
