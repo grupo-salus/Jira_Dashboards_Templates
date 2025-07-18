@@ -53,14 +53,24 @@
         </div>
       </div>
       <div style="padding: 20px">
-        <h2 style="color: #2c3e50">Parabéns, {{issue.customfield_10093}}!</h2>
-        <p style="color: #495057">
+        <h2 style="color: #2c3e50">Olá {{issue.customfield_10093}}!</h2>
+        <h3 style="color: #495057">
           Seu projeto <strong>{{issue.summary}} </strong> foi concluído com
           sucesso e está oficialmente entregue!
-        </p>
+        </h3>
         <p style="color: #495057">
-          Abaixo você encontra um resumo completo do projeto finalizado e suas
-          informações de entrega.
+          Para mais detalhes acesse seu projeto no Jira:<br />
+          <a
+            href="{{baseUrl}}/browse/{{issue.key}}"
+            style="
+              color: #0052cc;
+              text-decoration: underline;
+              font-size: 16px;
+              font-weight: 600;
+              transition: all 0.3s ease;
+            "
+            >Clique aqui</a
+          >
         </p>
         <div style="margin: 20px 0; text-align: left">
           <span
@@ -76,330 +86,7 @@
             >ENTREGUE</span
           >
         </div>
-        <div
-          style="
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 6px;
-            margin: 20px 0;
-          "
-        >
-          <h3 style="margin-top: 0; margin-bottom: 15px; color: #2c3e50">
-            Informações do Projeto
-          </h3>
-          <div
-            style="
-              background-color: #fff;
-              border: 1px solid #dee2e6;
-              border-radius: 4px;
-              padding: 15px;
-            "
-          >
-            <table width="100%" cellspacing="0" cellpadding="0" border="0">
-              <tr>
-                <td
-                  style="
-                    padding: 8px 0;
-                    border-bottom: 1px solid #f1f3f4;
-                    width: 180px;
-                  "
-                >
-                  <strong style="color: #34495e">Nome do Projeto:</strong>
-                </td>
-                <td
-                  style="
-                    padding: 8px 0;
-                    border-bottom: 1px solid #f1f3f4;
-                    color: #2c3e50;
-                  "
-                >
-                  {{issue.summary}}
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                  <strong style="color: #34495e">Data de Criação:</strong>
-                </td>
-                <td
-                  style="
-                    padding: 8px 0;
-                    border-bottom: 1px solid #f1f3f4;
-                    color: #2c3e50;
-                  "
-                >
-                  {{issue.created.format("dd/MM/yyyy")}}
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                  <strong style="color: #34495e">Data de Entrega:</strong>
-                </td>
-                <td
-                  style="
-                    padding: 8px 0;
-                    border-bottom: 1px solid #f1f3f4;
-                    color: #2c3e50;
-                  "
-                >
-                  {{issue.customfield_10355.format("dd/MM/yyyy")}}
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                  <strong style="color: #34495e">Data de Conclusão:</strong>
-                </td>
-                <td
-                  style="
-                    padding: 8px 0;
-                    border-bottom: 1px solid #f1f3f4;
-                    color: #2c3e50;
-                  "
-                >
-                  {{issue.resolutiondate.format("dd/MM/yyyy")}}
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                  <strong style="color: #34495e">Solicitante:</strong>
-                </td>
-                <td
-                  style="
-                    padding: 8px 0;
-                    border-bottom: 1px solid #f1f3f4;
-                    color: #2c3e50;
-                  "
-                >
-                  {{issue.customfield_10093}}
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                  <strong style="color: #34495e">Responsável Final:</strong>
-                </td>
-                <td
-                  style="
-                    padding: 8px 0;
-                    border-bottom: 1px solid #f1f3f4;
-                    color: #2c3e50;
-                  "
-                >
-                  {{issue.customfield_10413}}
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                  <strong style="color: #34495e">Prioridade:</strong>
-                </td>
-                <td
-                  style="
-                    padding: 8px 0;
-                    border-bottom: 1px solid #f1f3f4;
-                    color: #2c3e50;
-                  "
-                >
-                  {{issue.priority.name}}
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                  <strong style="color: #34495e">Investimento Esperado:</strong>
-                </td>
-                <td
-                  style="
-                    padding: 8px 0;
-                    border-bottom: 1px solid #f1f3f4;
-                    color: #2c3e50;
-                  "
-                >
-                  {{issue.customfield_10249}}
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; vertical-align: top">
-                  <strong style="color: #34495e">Descrição:</strong>
-                </td>
-                <td style="padding: 8px 0; color: #2c3e50">
-                  {{issue.description}}
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <div
-          style="
-            background-color: #e8f5e8;
-            border: 1px solid #4caf50;
-            color: #2e7d32;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-          "
-        >
-          <h3 style="margin-top: 0">🎯 Objetivos e Benefícios Alcançados</h3>
-          <div
-            style="
-              background-color: #fff;
-              border: 1px solid #e1e5e9;
-              border-radius: 5px;
-              padding: 15px;
-              margin: 10px 0;
-            "
-          >
-            <table width="100%" cellspacing="0" cellpadding="0" border="0">
-              <tr>
-                <td
-                  style="
-                    padding: 8px 0;
-                    border-bottom: 1px solid #f1f3f4;
-                    width: 180px;
-                    vertical-align: top;
-                  "
-                >
-                  <strong style="color: #34495e">Objetivo do Projeto:</strong>
-                </td>
-                <td
-                  style="
-                    padding: 8px 0;
-                    border-bottom: 1px solid #f1f3f4;
-                    color: #2c3e50;
-                  "
-                >
-                  {{issue.customfield_10481}}
-                </td>
-              </tr>
-              <tr>
-                <td
-                  style="
-                    padding: 8px 0;
-                    border-bottom: 1px solid #f1f3f4;
-                    vertical-align: top;
-                  "
-                >
-                  <strong style="color: #34495e">Benefícios Esperados:</strong>
-                </td>
-                <td
-                  style="
-                    padding: 8px 0;
-                    border-bottom: 1px solid #f1f3f4;
-                    color: #2c3e50;
-                  "
-                >
-                  {{issue.customfield_10248}}
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; vertical-align: top">
-                  <strong style="color: #34495e">Impacto Esperado:</strong>
-                </td>
-                <td style="padding: 8px 0; color: #2c3e50">
-                  {{issue.customfield_10480}}
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <div
-          style="
-            background-color: #fff3cd;
-            border: 1px solid #ffeaa7;
-            color: #856404;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-          "
-        >
-          <h3 style="margin-top: 0">📅 Cronograma de Entrega</h3>
-          <div
-            style="
-              background-color: #fff;
-              border: 1px solid #e1e5e9;
-              border-radius: 5px;
-              padding: 15px;
-              margin: 10px 0;
-            "
-          >
-            <table width="100%" cellspacing="0" cellpadding="0" border="0">
-              <tr>
-                <td
-                  style="
-                    padding: 8px 0;
-                    border-bottom: 1px solid #f1f3f4;
-                    width: 180px;
-                  "
-                >
-                  <strong style="color: #34495e"
-                    >Início do Desenvolvimento:</strong
-                  >
-                </td>
-                <td
-                  style="
-                    padding: 8px 0;
-                    border-bottom: 1px solid #f1f3f4;
-                    color: #2c3e50;
-                  "
-                >
-                  {{issue.customfield_10349.format("dd/MM/yyyy")}}
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                  <strong style="color: #34495e"
-                    >Fim do Desenvolvimento:</strong
-                  >
-                </td>
-                <td
-                  style="
-                    padding: 8px 0;
-                    border-bottom: 1px solid #f1f3f4;
-                    color: #2c3e50;
-                  "
-                >
-                  {{issue.customfield_10350.format("dd/MM/yyyy")}}
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                  <strong style="color: #34495e"
-                    >Período de Homologação:</strong
-                  >
-                </td>
-                <td
-                  style="
-                    padding: 8px 0;
-                    border-bottom: 1px solid #f1f3f4;
-                    color: #2c3e50;
-                  "
-                >
-                  {{issue.customfield_10351.format("dd/MM/yyyy")}} -
-                  {{issue.customfield_10352.format("dd/MM/yyyy")}}
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; border-bottom: 1px solid #f1f3f4">
-                  <strong style="color: #34495e">Operação Assistida:</strong>
-                </td>
-                <td
-                  style="
-                    padding: 8px 0;
-                    border-bottom: 1px solid #f1f3f4;
-                    color: #2c3e50;
-                  "
-                >
-                  {{issue.customfield_10353.format("dd/MM/yyyy")}} -
-                  {{issue.customfield_10354.format("dd/MM/yyyy")}}
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0">
-                  <strong style="color: #34495e">Entrega Final:</strong>
-                </td>
-                <td style="padding: 8px 0; color: #2c3e50">
-                  {{issue.customfield_10355.format("dd/MM/yyyy")}}
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
+
         <div
           style="
             background-color: #f8f9fa;
@@ -482,10 +169,10 @@
         <div
           style="
             background-color: #f8f9fa;
-            border: 2px solid #002a3a;
-            color: #002a3a;
+            border: 2px solid #28a745;
+            color: #218838;
             padding: 30px;
-            border-radius: 8px;
+            border-radius: 0;
             margin: 30px 0;
             text-align: center;
             box-shadow: 0 4px 12px rgba(44, 62, 80, 0.1);
@@ -540,43 +227,7 @@
             contínua do nosso trabalho. 💡
           </p>
         </div>
-        <div
-          style="
-            background-color: #d1ecf1;
-            border: 1px solid #b8daff;
-            color: #0c5460;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-          "
-        >
-          <h3 style="margin-top: 0">📞 Contato e Suporte</h3>
-          <p>Para dúvidas sobre este projeto ou suporte pós-entrega:</p>
-          <ul style="padding-left: 20px; margin: 0">
-            <li>
-              <strong>Email de Suporte:</strong
-              ><a
-                href="mailto:chamados@gruposalus.com.br"
-                style="color: #0c5460"
-                >chamados@gruposalus.com.br</a
-              >
-            </li>
-            <li>
-              <strong>Portal de Suporte:</strong
-              ><a
-                href="https://suporte.gruposalus.com.br/"
-                style="color: #0c5460"
-                >https://suporte.gruposalus.com.br/</a
-              >
-            </li>
-            <li>
-              <strong>Seu Projeto no Jira:</strong
-              ><a href="{{baseUrl}}/browse/{{issue.key}}" style="color: #0c5460"
-                >{{issue.key}}</a
-              >
-            </li>
-          </ul>
-        </div>
+
         <div
           style="
             background-color: #033e3b;
@@ -617,6 +268,32 @@
                 {{issue.key}} | Entregue em:
                 {{issue.customfield_10355.format("dd/MM/yyyy")}} | Solicitante:
                 {{issue.customfield_10093}}
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="
+                  font-size: 11px;
+                  line-height: 1.4;
+                  padding: 15px 0 5px 0;
+                  opacity: 0.7;
+                  border-top: 1px solid rgba(255, 255, 255, 0.2);
+                  margin-top: 10px;
+                "
+              >
+                <strong>Suporte:</strong>
+                Clique para acessar o
+                <a
+                  href="https://suporte.gruposalus.com.br/"
+                  style="color: #ffffff; text-decoration: underline"
+                  >portal de chamados</a
+                >
+                ou envie um email para
+                <a
+                  href="mailto:chamados@gruposalus.com.br"
+                  style="color: #ffffff; text-decoration: none"
+                  >chamados@gruposalus.com.br</a
+                >
               </td>
             </tr>
           </table>
